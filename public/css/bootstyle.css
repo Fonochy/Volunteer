@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Hina+Mincho&family=Source+Serif+Pro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
+
+.logo {
+    font-family: 'Source Serif Pro', serif;
+    font-size: 20px;
+    color: black;
+}
+.logo1 {
+    font-family: 'Source Serif Pro', serif;
+    font-size: 30px;
+    color: black;
+}
+
+.logo2 {
+    font-family: 'Source Serif Pro', serif;
+    font-size: 30px;
+    color: blue;
+}
+
+.logo3 {
+    font-family: 'Source Serif Pro', serif;
+    font-size: 20px;
+    color: white;
+}
+
+
+.nav1 {
+    font-family: 'Source Serif Pro', sans-serif;
+    font-size: 20px;
+    color: black;
+   
+}
+
+.text1{
+    font-family: 'Prompt', sans-serif;
+    font-size: 15px;
+    color: black;
+}
+
+.text2{
+    font-family: 'Prompt', sans-serif;
+    font-size: 20px;
+    color: black;
+}
+
+.text3{
+    font-family: 'Prompt', sans-serif;
+    font-size: 40px;
+    color: black;
+}
+.text4{
+    font-family: 'Prompt', sans-serif;
+    font-size: 20px;
+    color: red;
+}
+
+.text5{
+    font-family: 'Prompt', sans-serif;
+    font-size: 30px;
+    color: black;
+}
+
+.text6{
+    font-family: 'Prompt', sans-serif;
+    font-size: 30px;
+    color: blue;
+}
+
