@@ -5,6 +5,9 @@ const path = require('path');
 router.get("/", (req, res) => {
     res.redirect("/index");
 });
+router.get("/aboutus.html", (req, res) => {
+    res.redirect("/aboutus");
+});
 
 router.get("/index", (req, res) => {
     res.sendFile(path.join(__dirname+'/frontend/index.html'))
@@ -16,6 +19,10 @@ router.get("/signup", (req, res) => {
 
 router.get("/signin", (req, res) => {
     res.sendFile(path.join(__dirname+'/frontend/signin.html'))
+})
+
+router.get("/aboutus", (req, res) => {
+    res.sendFile(path.join(__dirname+'/frontend/aboutus.html'))
 })
 
 
