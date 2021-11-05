@@ -114,7 +114,6 @@ body {
 .bg-img {
 	background-image: url(../img/imgv/v7.jpg);
 	background-size: cover;
-    min-width: 50%;
 	vertical-align: top;
 	height: 100%;
 	/* display: inline-block;
@@ -130,6 +129,15 @@ body {
 
 .login {
 	width: 100%;
+	height: 550px;
+	background-color: #fff;
+	padding: 15px;
+	padding-top: 30px;
+}
+
+
+.login1 {
+	width: 100%;
 	height: 700px;
 	background-color: #fff;
 	padding: 15px;
@@ -138,8 +146,9 @@ body {
 
 .login h1 {
 	margin-top: 30px;
+  font-family: 'Montserrat', serif;
+  font-size: 50px;
 	font-weight: bold;
-	font-size: 60px;
 	letter-spacing: 3px;
 }
 
@@ -153,9 +162,9 @@ body {
 	text-transform: uppercase;
 	font-weight: bold;
 	letter-spacing: 2px;
-	font-size: 20px;
+	font-size: 15px;
 	padding: 14px;
-	background-color: #00B72E;
+	background-color: #d70656;
 }
 
 .form-group input {
@@ -163,7 +172,7 @@ body {
 	font-weight: lighter;
 	border: none;
 	background-color: #F0F0F0;
-	color: #465347!important;
+	color: #000000!important;
 	padding: 26px 30px;
 	border-radius: 50px;
 	transition : 0.2s;
@@ -189,4 +198,10 @@ body {
 		padding-top: 50px;
 	}
 
+}
+
+.btnsize{
+  font-family: 'Source Serif Pro', serif;
+    font-size: 15px;
+    color: black;
 }
