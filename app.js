@@ -27,26 +27,26 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 // secret key กำหนดเองได้
-app.use(session({
-  secret: 'djhxcvxfgshajfgjhgsjhfgsakjeauytsdfy',
-  resave: false,
-  saveUninitialized: true
-  }));
+app.use(
+  session({
+    secret: "djhxcvxfgshajfgjhgsjhfgsakjeauytsdfy",
+    resave: false,
+    saveUninitialized: true,
+  })
+);
 
-  app.use(flash());
+app.use(flash());
 
-   // Global variables
-app.use(function(req, res, next){
-  res.locals.success_msg = req.flash('success_msg');
-  res.locals.error_msg = req.flash('error_msg');
-  res.locals.error = req.flash('error');
+// Global variables
+app.use(function (req, res, next) {
+  res.locals.success_msg = req.flash("success_msg");
+  res.locals.error_msg = req.flash("error_msg");
+  res.locals.error = req.flash("error");
   next();
 });
 
-
-app.use("/index", indexRouter);
-app.use("/", usersRouter);
-
+app.use("/", indexRouter);
+app.use("/index", usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -61,16 +61,21 @@ app.use(function (err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
+
+  console.log("Fatal Error: \n" + err.message);
   res.render("error");
 });
 // environment mode มีทั้ง development ที่แสดง error และ production ไม่แสดง error
 
 mongoose.set("autoIndex", true);
 mongoose
-  .connect("mongodb+srv://dbFon:nattinee44@volunteer.sbtb4.mongodb.net/volunteer", {
-    useUnifiedTopology: true,
-    useNewUrlParser: true,
-  })
+  .connect(
+    "mongodb+srv://dbFon:nattinee44@volunteer.sbtb4.mongodb.net/volunteer",
+    {
+      useUnifiedTopology: true,
+      useNewUrlParser: true,
+    }
+  )
   .then(() => console.log("DB Connected!"));
 
 mongoose.connection.on("connected", function () {
