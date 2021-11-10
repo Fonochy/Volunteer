@@ -31,12 +31,12 @@
             <!-- Loging form -->
             <div class="login1">
               <h1>Sign Up</h1>
-              <form class="needs-validation" novalidate>
+              <form class="needs-validation" novalidate method="POST" action="/add-users-api" nctype="multipart/form-data">
                 <div class="form-row">
 
                   <div class="col-md-6 mb-6">
                     <label for="validationCustom01">First name</label>
-                    <input type="text" class="form-control" id="validationCustom01" placeholder="First name"  required>
+                    <input type="text" class="form-control" id="validationCustom01" placeholder="First name" name="user_name" required>
                     <div class="valid-feedback">
                       Looks good!
                     </div>
@@ -44,7 +44,7 @@
 
                   <div class="col-md-6 mb-6">
                     <label for="validationCustom02">Last name</label>
-                    <input type="text" class="form-control" id="validationCustom02" placeholder="Last name"  required>
+                    <input type="text" class="form-control" id="validationCustom02" placeholder="Last" name="user_lastname"  required>
                     <div class="valid-feedback">
                       Looks good!
                     </div>
@@ -54,31 +54,31 @@
 
                   <div class="col-md-6 mb-6">
                     <label for="inputEmail3">Email</label>
-                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email"  required>
+                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email" name="user_email"  required>
                   </div>
 
                   <div class="col-md-6 mb-6">
-                    <label for="inputEmail3">Conferm Password</label>
-                    <input type="email" class="form-control" id="inputEmail3" placeholder="Conferm Email"  required>
+                    <label for="inputEmail3">Conferm Email</label>
+                    <input type="email" class="form-control" id="inputEmail3" placeholder="Confirm Email"   name="user_confirmemail" required>
                   </div>
 
                   <br><br><br><br>
 
                   <div class="col-md-6 mb-6">
                     <label for="inputPassword3">Email</label>
-                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password"  required>
+                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password" name="user_password" required>
                   </div>
 
                   <div class="col-md-6 mb-6">
                     <label for="inputPassword3">Conferm Password</label>
-                    <input type="password" class="form-control" id="inputPassword3" placeholder="Conferm Password"  required>
+                    <input type="password" class="form-control" id="inputPassword3" placeholder="Conferm Password"  name="user_confirmpassword"   required>
                   </div>
 
                   <script src="js/countrypicker.js"></script>
 
                 </div>
                 <br><br><br><br>
-                <select id="country" name="country">
+                <select id="country" name="user_country">
                   <option value="Afganistan">Afghanistan</option>
                   <option value="Albania">Albania</option>
                   <option value="Algeria">Algeria</option>
