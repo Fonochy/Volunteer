@@ -9,8 +9,8 @@ var session = require("express-session");
 var flash = require("req-flash");
 var cors = require("cors");
 
-var indexRouter = require("./router/api/index");
-var usersRouter = require("./router/api/users");
+var indexRouter = require("./views/index");
+var usersRouter = require("./router/routes");
 
 var app = express();
 app.use(cors());
@@ -46,7 +46,7 @@ app.use(function (req, res, next) {
 });
 
 app.use("/", indexRouter);
-app.use("/index", usersRouter);
+app.use("/api", usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -66,37 +66,5 @@ app.use(function (err, req, res, next) {
   res.render("error");
 });
 // environment mode มีทั้ง development ที่แสดง error และ production ไม่แสดง error
-
-mongoose.set("autoIndex", true);
-mongoose
-  .connect(
-    "mongodb+srv://dbFon:nattinee44@volunteer.sbtb4.mongodb.net/volunteer",
-    {
-      useUnifiedTopology: true,
-      useNewUrlParser: true,
-    }
-  )
-  .then(() => console.log("DB Connected!"));
-
-mongoose.connection.on("connected", function () {
-  console.log("Mongoose default connection open");
-});
-
-mongoose.connection.on("error", function (err) {
-  console.log("Mongoose default connection error: " + err);
-});
-
-mongoose.connection.on("disconnected", function () {
-  console.log("Mongoose default connection disconnected");
-});
-
-process.on("SIGINT", function () {
-  mongoose.connection.close(function () {
-    console.log(
-      "Mongoose default connection disconnected through app termination"
-    );
-    process.exit(0);
-  });
-});
 
 module.exports = app;
