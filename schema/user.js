@@ -32,26 +32,27 @@ process.on("SIGINT", function () {
   });
 });
 
-
 var Schema = mongoose.Schema,
   ObjectId = Schema.ObjectId;
 
 var myuser = new Schema({
   user_firstname: String,
   user_lastname: String,
-  user_email: String,
-  user_confirmemail: String,
+  user_email: {
+    type: "String",
+    unique: true,
+    required: true,
+  },
   user_password: String,
-  user_confirmpassword: String,
   user_country: String,
 });
 // สร้างโมเดล
-let Users = mongoose.model("users",myuser)
+let Users = mongoose.model("users", myuser);
 
 // ส่งออกโมเดล
-module.exports = Users
+module.exports = Users;
 
 //ออกแบบฟังก์ชั่นสำหรับบันทึกข้อมูล
-module.exports.saveProduct=function(model,data){
-  model.save(data)
-}
+module.exports.saveProduct = function (model, data) {
+  model.save(data);
+};

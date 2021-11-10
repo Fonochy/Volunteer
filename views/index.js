@@ -14,7 +14,7 @@ router.get("/signup", function (req, res, next) {
 });
 
 router.get("/aboutus", function (req, res, next) {
-    res.render("aboutus");
-  });
+  res.render("aboutus");
+});
 
 module.exports = router;
