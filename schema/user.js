@@ -44,7 +44,12 @@ var myuser = new Schema({
     required: true,
   },
   user_password: String,
+  user_nationality: String,
   user_country: String,
+  user_datebirth: Date,
+  user_tel: String,
+  user_gender: String,
+  user_volunteer: String,
 });
 // สร้างโมเดล
 let Users = mongoose.model("users", myuser);
