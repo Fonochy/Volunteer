@@ -11,7 +11,16 @@
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
+   <!--Scriptของform input เบอร์โทรศัพท์  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"
+    integrity="sha512-DNeDhsl+FWnx5B1EQzsayHMyP6Xl/Mg+vcnFPXGNjUZrW28hQaa1+A4qL9M+AiOMmkAhKAWYHh1a+t6qxthzUw=="
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css"
+    integrity="sha512-yye/u0ehQsrVrfSd6biT17t39Rg9kNc+vENcCXZuMz2a+LWFGvXUnYuWUW6pbfYj1jcBb/C39UZw2ciQvwDDvg=="
+    crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+    integrity="sha512-BNZ1x39RMH+UYylOW419beaGO0wqdSkO7pi1rYDYco9OL3uvXaC/GTqA5O4CVK2j4K9ZkoDNSSHVkEQKkgwdiw=="
+    crossorigin="anonymous"></script>
 
 
 </head>
@@ -349,14 +358,28 @@
 
               <div class="col-md-6 mb-6">
                 <label for="inputDate">Date of Birth</label>
-                <input type="date" class="form-control" id="inputDate3" placeholder="Date"
+                <input type="date" class="form-control" id="inputDate3"  placeholder="DD-MM-YYYY"
                   name="user_datebirth" required>
               </div>
               <div class="col-md-6 mb-6">
                 <label for="inputTel">Tel.</label>
-                <input type="text" class="form-control" id="inputTel3" placeholder="Tel."
-                  name="user_tel" required>
+                <br>
+                <input name="phone" type="text" class="form-control mb-2 inptFielsd" id="phone"placeholder="Phone Number" />
+                <!-- JAVASCRIPT CODE REQUIRED -->
+                <script>
+                  var input = document.querySelector("#phone");
+                  window.intlTelInput(input, {
+                    separateDialCode: true,
+                    customPlaceholder: function (
+                      selectedCountryPlaceholder,
+                      selectedCountryData
+                    ) {
+                      return "e.g. " + selectedCountryPlaceholder;
+                    },
+                });
+                </script> 
               </div>
+
 
               <br><br><br><br>
 
