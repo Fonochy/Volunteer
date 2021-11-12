@@ -6,7 +6,11 @@ var Response = require("../../response");
 
 /* POST Data. */
 router.post("/add-users-api", function (req, res, next) {
-  var data = Users(req.body);
+  const user = {
+    ...req.body, //copy old json
+    phone: `+${req.body.inputTel}${req.body.phone}`,
+  };
+  var data = Users(user);
   //var data = UsersModel(req.body);
   data.save(function (err) {
     if (err) {
