@@ -220,4 +220,28 @@ body {
   height: 40px;
   
 }
+aside {
+  width: 30%;
+ 
+  float: right;
+  
+}
+.apply_program{
+  width: 600px;
+}
+.apply_destination{
+  width: 600px;
+}
+.apply_duration{
+  width: 600px;
+}
+.formpaydate{
+  width: 600px;
+}
+.formtimepay{
+  width: 600px;
+}
+.form-controlamount{
+  width: 600px;
+}
 
