@@ -2,6 +2,7 @@ var express = require("express");
 var router = express.Router();
 
 var Users = require("../../schema/user");
+var Contact = require("../../schema/user");
 var Response = require("../../response");
 
 /* POST Data. */
