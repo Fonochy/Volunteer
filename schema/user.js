@@ -52,11 +52,28 @@ var myuser = new Schema({
   user_volunteer: String,
   
 });
+
+var mycontact = new Schema({
+  user_namecontact: String,
+  user_emailcontact: {
+    type: "String",
+    unique: true,
+    required: true,
+  },
+  user_message: String,
+  
+});
+
+
 // สร้างโมเดล
 let Users = mongoose.model("users", myuser);
+let Contact = mongoose.model("contactus", mycontact);
+
+
 
 // ส่งออกโมเดล
 module.exports = Users;
+module.exports = Contact;
 
 //ออกแบบฟังก์ชั่นสำหรับบันทึกข้อมูล
 module.exports.saveProduct = function (model, data) {
