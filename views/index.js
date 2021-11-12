@@ -16,5 +16,8 @@ router.get("/signup", function (req, res, next) {
 router.get("/aboutus", function (req, res, next) {
   res.render("aboutus");
 });
+router.get("/contactus", function (req, res, next) {
+  res.render("contactus");
+});
 
 module.exports = router;
