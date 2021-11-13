@@ -70,7 +70,7 @@ var userapply = new Schema({
   apply_datebirth: Date,
   apply_duration: String,
   apply_paymentdate: Date,
-  apply_timepayment: String,
+  apply_timepayment:  String,
   apply_amountpay:String,
   
 });
