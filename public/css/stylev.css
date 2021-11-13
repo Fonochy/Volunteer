@@ -212,4 +212,36 @@ body {
 .img-about{
   padding-left: 240px;
 }
+.img-apply{
+  padding-left: 140px;
+}
+.img-pro{
+  width: 40px;
+  height: 40px;
+  
+}
+aside {
+  width: 30%;
+ 
+  float: right;
+  
+}
+.apply_program{
+  width: 600px;
+}
+.apply_destination{
+  width: 600px;
+}
+.apply_duration{
+  width: 600px;
+}
+.formpaydate{
+  width: 600px;
+}
+.formtimepay{
+  width: 600px;
+}
+.form-controlamount{
+  width: 600px;
+}
 
