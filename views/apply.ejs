@@ -31,7 +31,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Apply</a>
+          <a class="nav-link" href="/apply">Apply</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/signin">Sign In</a>
@@ -375,14 +375,13 @@
           required>
     </div>
     
+             
               <div class="col-md-6 mb-6">
-                <label for="timePay" class="mt-3 h3 text-black">Time:</label>
-                <input type="text" class="formtimepay" id="input_timepay" placeholder="00:00"
-                  name="apply_timepayment" required>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
-              </div>
+                <label for="inputDateapp" class="mt-3 h3 text-black">Time</label>
+                <input type="time" class="form-control" id="inputTime_apply" placeholder="__:__" name="apply_timepayment"
+                required>
+            </div>
+              
               <div class="col-md-6 mb-6">
                 <label for="amountPay" class="mt-3 h3 text-black">Amount:</label>
                 <input type="text" class="form-controlamount" id="input_amountpay" placeholder=""
@@ -394,8 +393,7 @@
               <br><br>
               <div class="col-md-12 mb-12">
                 <input class="btn btn-primary" type="submit"></input>
-              </div>
-           
+              </div>         
     
 </div>
 </form>

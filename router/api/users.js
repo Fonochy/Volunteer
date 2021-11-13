@@ -3,6 +3,7 @@ var router = express.Router();
 
 var Users = require("../../schema/user");
 var Contact = require("../../schema/user");
+var Apply = require("../../schema/user");
 var Response = require("../../response");
 
 /* POST Data. */
@@ -23,5 +24,7 @@ router.post("/add-users-api", function (req, res, next) {
     }
   });
 });
+
+
 
 module.exports = router;

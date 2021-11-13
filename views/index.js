@@ -25,6 +25,10 @@ router.get("/apply", function (req, res, next) {
 router.get("/howtowork", function (req, res, next) {
   res.render("howtowork");
 });
+router.get("/featuredestination", function (req, res, next) {
+  res.render("featuredestination");
+});
+
 
 
 module.exports = router;

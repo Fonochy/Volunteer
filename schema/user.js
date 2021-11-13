@@ -63,18 +63,30 @@ var mycontact = new Schema({
   user_message: String,
   
 });
+var userapply = new Schema({
+  
+  apply_destination: String,
+  apply_program: String,
+  apply_datebirth: Date,
+  apply_duration: String,
+  apply_paymentdate: Date,
+  apply_timepayment:  String,
+  apply_amountpay:String,
+  
+});
 
 
 // สร้างโมเดล
 let Users = mongoose.model("users", myuser);
 let Contact = mongoose.model("contactus", mycontact);
+let Apply = mongoose.model("applyuser",userapply);
 
 
 
 // ส่งออกโมเดล
 module.exports = Users;
 module.exports = Contact;
-
+module.exports = Apply;
 //ออกแบบฟังก์ชั่นสำหรับบันทึกข้อมูล
 module.exports.saveProduct = function (model, data) {
   model.save(data);
