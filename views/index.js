@@ -22,5 +22,9 @@ router.get("/contactus", function (req, res, next) {
 router.get("/apply", function (req, res, next) {
   res.render("apply");
 });
+router.get("/howtowork", function (req, res, next) {
+  res.render("howtowork");
+});
+
 
 module.exports = router;
