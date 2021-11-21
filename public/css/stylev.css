@@ -247,3 +247,9 @@ aside {
   width: 600px;
 }
 
+.num-container {
+  border-radius: 360;
+  background-color: #e19898;
+  width: 250;
+  height: 250;
+}
