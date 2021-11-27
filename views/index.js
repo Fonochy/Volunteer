@@ -28,6 +28,10 @@ router.get("/howtowork", function (req, res, next) {
 router.get("/featuredestination", function (req, res, next) {
   res.render("featuredestination");
 });
+router.get("/allprogram", function (req, res, next) {
+  res.render("program");
+});
+
 
 
 
