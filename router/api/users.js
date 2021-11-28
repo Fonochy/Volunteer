@@ -1,12 +1,11 @@
 var express = require("express");
 var router = express.Router();
 
-var Users = require("../../schema/user");
-var Contact = require("../../schema/user");
-var Apply = require("../../schema/user");
+var { Users, Contact, Apply } = require("../../schema/user");
 var Response = require("../../response");
 
 /* POST Data. */
+// add User
 router.post("/add-users-api", function (req, res, next) {
   const user = {
     ...req.body, //copy old json
@@ -17,6 +16,35 @@ router.post("/add-users-api", function (req, res, next) {
   data.save(function (err) {
     if (err) {
       res.redirect("/signup");
+      Response.errorResponse(err, res);
+    } else {
+      res.redirect("/");
+      // Response.successResponse("User Added!", res, {});
+    }
+  });
+});
+// add Apply
+router.post("/add-apply", (req, res) => {
+  const apply = req.body;
+  var data = Apply(apply);
+  data.save(function (err) {
+    if (err) {
+      res.redirect("/apply");
+      Response.errorResponse(err, res);
+    } else {
+      res.redirect("/");
+      // Response.successResponse("User Added!", res, {});
+    }
+  });
+});
+
+// add Contact
+router.post("/add-contact", (req, res) => {
+  const contact = req.body;
+  var data = Contact(contact);
+  data.save(function (err) {
+    if (err) {
+      res.redirect("/contactus");
       Response.errorResponse(err, res);
     } else {
       res.redirect("/");
