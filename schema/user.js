@@ -57,7 +57,6 @@ var mycontact = new Schema({
   user_namecontact: String,
   user_emailcontact: {
     type: "String",
-    unique: true,
     required: true,
   },
   user_message: String,
@@ -76,18 +75,12 @@ var userapply = new Schema({
 });
 
 
-// สร้างโมเดล
-let Users = mongoose.model("users", myuser);
-let Contact = mongoose.model("contactus", mycontact);
-let Apply = mongoose.model("applyuser",userapply);
+// สร้างและส่งออกโมเดล
+exports.Users = mongoose.model("users", myuser);
+exports.Contact = mongoose.model("contactus", mycontact);
+exports.Apply = mongoose.model("applyuser", userapply);
 
-
-
-// ส่งออกโมเดล
-module.exports = Users;
-module.exports = Contact;
-module.exports = Apply;
 //ออกแบบฟังก์ชั่นสำหรับบันทึกข้อมูล
-module.exports.saveProduct = function (model, data) {
+exports.saveProduct = function (model, data) {
   model.save(data);
 };
