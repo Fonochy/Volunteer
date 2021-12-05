@@ -1,27 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Hina+Mincho&family=Source+Serif+Pro:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+
 body{
-  font-family: 'Montserrat', serif;
+  font-family: 'Poppins', serif;
 }
 .navi {
-    font-family: 'Source Serif Pro', serif;
+    font-family: 'Poppins', serif;
     font-size: 22px;
     color: black;
     margin-right: 20px;
     text-align: right;
 }
 .h2 {
-    font-family: 'Source Serif Pro', serif;
+    font-family: 'Poppins', serif;
     font-size: 15px;
     color: black;
 }
 .h3 {
-    font-family: 'Source Serif Pro', serif;
+    font-family: 'Poppins', serif;
     font-size: 100px;
     color: rgb(17, 0, 255);
 }
 body {
+  font-family: 'Poppins', serif;
     background-color:  #eee;
   }
   .title {
@@ -398,5 +403,19 @@ a:hover {
 
 .round {
   border-radius: 50%;
+}
+
+.square{
+  height: 800px;
+}
+
+.text-des{
+  font-size: 30px;
+  font-family: Poppins;
+}
+
+.text1-des{
+  font-size: 18px;
+  font-family: Poppins;
 }
 
