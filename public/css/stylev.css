@@ -329,3 +329,74 @@ aside {
  width: 200px;
 }
 
+.icon{
+  width: 60px;
+  height: 60px;
+
+}
+.icon1{
+  width: 40px;
+  height: 40px;
+  margin-top: 1%;
+  
+}
+
+.n1 {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 10%;
+} 
+.n2 {
+  margin-top: 20px;
+  margin-right: 300px;
+  font-size: 18px;
+  line-height: 10%;
+} 
+
+
+.b1{
+  margin-left: 80%;
+  margin-top: 400px;
+}
+
+.imgsize{
+  width: 150%;
+  height: 150%;
+  margin-top: 80px;
+}
+
+.topic{
+  line-height: 5%;
+  margin-top: 50px;
+ 
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+ 
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+  
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+  
+}
+
+.next {
+  background-color: #04AA6D;
+  color: white;
+  
+}
+
+.round {
+  border-radius: 50%;
+}
+
