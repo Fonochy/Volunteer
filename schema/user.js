@@ -74,12 +74,17 @@ var userapply = new Schema({
   
 });
 
+var feature = new Schema({
+  discover_program: String,
+  place_program: String,
+})
+
 
 // สร้างและส่งออกโมเดล
 exports.Users = mongoose.model("users", myuser);
 exports.Contact = mongoose.model("contactus", mycontact);
 exports.Apply = mongoose.model("applyuser", userapply);
-
+exports.Feature = mongoose.model("featureprogram", feature )
 //ออกแบบฟังก์ชั่นสำหรับบันทึกข้อมูล
 exports.saveProduct = function (model, data) {
   model.save(data);

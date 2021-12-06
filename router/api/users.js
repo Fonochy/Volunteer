@@ -39,7 +39,7 @@ router.post("/add-apply", (req, res) => {
 });
 
 // add Contact
-router.post("/add-contact", (req, res) => {
+router.post("/add-contact",(req, res) => {
   const contact = req.body;
   var data = Contact(contact);
   data.save(function (err) {
@@ -52,7 +52,5 @@ router.post("/add-contact", (req, res) => {
     }
   });
 });
-
-
 
 module.exports = router;
