@@ -28,6 +28,9 @@ router.get("/howtowork", function (req, res, next) {
 router.get("/featuredestination", function (req, res, next) {
   res.render("featuredestination");
 });
+router.get("/featureprogramm", function (req, res, next) {
+  res.render("featureprogramm");
+});
 router.get("/allprogram", function (req, res, next) {
   res.render("program");
 });
