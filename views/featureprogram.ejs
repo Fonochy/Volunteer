@@ -51,7 +51,7 @@
     <br><br><br>
     <h1 class="text-left display-3 fw-bold text-muted ">Feature Program</h1>
     
-
+    
     <aside>
       <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
         <section class="about-cards-section">
@@ -76,17 +76,18 @@
         </section>
     </aside>
     <br>
-    <div class="col-sm-6 square" style="background-color: #F6F0F0;">
+     <div class="col-sm-6 square" style="background-color: #F6F0F0;">
       <br>
+    <% Object.values(featureprogram).forEach(function(item){%>
       <h1 class="text-left text-des text-danger">Discover Marine !</h1>
-      <p class="text-left text1-des">&nbsp;&nbsp;&nbsp;&nbsp;The Osa Peninsula is also a great place to get a glimpse into Costa Rica's past. Former gold mining villages introduce visitors to rural Tico life and enormous pre-Columbian stone spheres continue to baffle archaeologists.
+      <p class="text-left text1-des">&nbsp;&nbsp;&nbsp;&nbsp;<%= item.discover_program%>
       </p>
       <br><br><br><br><br><br>
       <hr>
       <h1 class="text-left text-des text-danger">Go to Costa Rica</h1>
-      <p class="text-left text1-des">&nbsp;&nbsp;&nbsp;&nbsp;Incredible dive program focused on conserving the unique marine environment in the fabulous city of Costa Rica, Puerto Jiménez, Osa Peninsula!!
-        Corcovado National Park & Caño Island Biological Reserve. Both will offer the adventurous traveler a truly authentic nature experience. Explore forest trails, waterfalls, spring-fed rivers, tide pools, and enjoy some of the best snorkeling & scuba diving in all of Costa Rica</p>
+      <p class="text-left text1-des">&nbsp;&nbsp;&nbsp;&nbsp;<%= item.place_program%></p>
     </div>
+    <% }) %> -->
     <br>
     <div class="col-sm-6 col-lg-12">
     <b><h1 class="text-left text-des text-danger">Our Programs</h1></b>
