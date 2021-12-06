@@ -23,9 +23,11 @@ router.post("/add-users-api", function (req, res, next) {
     }
   });
 });
+
 // add Apply
-router.post("/add-apply", (req, res) => {
+router.post("/add-apply",(req, res) => {
   const apply = req.body;
+  
   var data = Apply(apply);
   data.save(function (err) {
     if (err) {
@@ -52,5 +54,6 @@ router.post("/add-contact",(req, res) => {
     }
   });
 });
+
 
 module.exports = router;
