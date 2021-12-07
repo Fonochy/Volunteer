@@ -46,10 +46,10 @@
   <br><br><br><br><br><br>
     <!-- Middle image -->
   <img src="img/imgv/costa.jpg" class="img-fluid text-align-center" width="100%" alt="Responsive image">
-    
+  <% if(featureprogram) {%> 
   <div class="container">
     <br><br><br>
-    <h1 class="text-left display-3 fw-bold text-muted ">Feature Program</h1>
+    <h1 class="text-left display-3 fw-bold text-muted "><%= featureprogram.name%></h1>
     
     
     <aside>
@@ -78,27 +78,24 @@
     <br>
      <div class="col-sm-6 square" style="background-color: #F6F0F0;">
       <br>
-     <!--- <% Object.values(featureprogram).forEach(function(item){%> -->
-      <h1 class="text-left text-des text-danger">Discover Marine !</h1>
-      <p class="text-left text1-des">&nbsp;&nbsp;&nbsp;&nbsp;<%= item.discover_program%>
+     
+      
+      <h1 class="text-left text-des text-danger"><%= featureprogram.topic%></h1>
+      <p class="text-left text1-des">&nbsp;&nbsp;&nbsp;&nbsp;<%= featureprogram.discover_program%>
       </p>
       <br><br><br><br><br><br>
       <hr>
-      <h1 class="text-left text-des text-danger">Go to Costa Rica</h1>
-      <p class="text-left text1-des">&nbsp;&nbsp;&nbsp;&nbsp;<%= item.place_program%></p>
+      <h1 class="text-left text-des text-danger"><%= featureprogram.topic2%></h1>
+      <p class="text-left text1-des">&nbsp;&nbsp;&nbsp;&nbsp;<%= featureprogram.place_program%></p>
     </div>
-   <!-- <% }) %> --> 
+   
     <br>
     <div class="col-sm-6 col-lg-12">
     <b><h1 class="text-left text-des text-danger">Our Programs</h1></b>
     <br>
-    <img src="img/imgv/ma1.png" class="img-fluid text-align-center"  alt="Responsive image">
+    <img src="img/imgv/<%= featureprogram.coverimage%>" class="img-fluid text-align-center"  alt="Responsive image">
     <br><br>
-    <p class="text-left text1-des">&#x02022;Protect the unrivalled Mediterranean Sea<br>
-      &#x02022;Restore the natural state of the marine ecosystem <br>
-      &#x02022;Gather information on marine pollutants <br>
-      &#x02022;Observe and record fish species and numbers<br>
-      &#x02022;Enable inter-cultural exchange and develop an understanding of the Mediterranean Sea ecosystem </p>
+    <p class="text-left text1-des"><%= featureprogram.detail%> </p>
     
     <br>
     <b><h1 class="text-left text-des text-danger">Requirements</h1></b>
@@ -115,5 +112,6 @@
     
     
   </div>  
+  <% } %>
 </body>
 </html>
