@@ -419,3 +419,18 @@ a:hover {
   font-family: Poppins;
 }
 
+.cardtitle{
+
+  font-size: 20px;
+  font-family: Poppins;
+}
+
+.cardbody{
+  font-size: 15px;
+  font-family: Poppins;
+}
+
+.imgsize1{
+  width: 5%;
+  height: 20%;
+}

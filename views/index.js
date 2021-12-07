@@ -11,6 +11,14 @@ router.get("/", function (req, res, next) {
   
 });
 
+router.get('/:id',function (req, res, next){
+  const featureprogram_id = req.params.id
+    console.log(featureprogram_id)
+    Feature.findOne({_id:featureprogram_id}).exec((err,doc)=>{
+            res.render('featureprogram',{featureprogram:doc})
+    })
+     
+})
 
 router.get("/signin", function (req, res, next) {
   res.render("signin");
@@ -35,12 +43,7 @@ router.get("/howtowork", function (req, res, next) {
 router.get("/featuredestination", function (req, res, next) {
   res.render("featuredestination");
 });
-router.get("/featureprogram", function (req, res, next) {
-  Feature.find().exec((err,doc)=>{
-  res.render('featureprogram',{featureprogram:doc})
-    console.log(err);
-  })
-});
+
 
 router.get("/allprogram", function (req, res, next) {
   res.render("program");

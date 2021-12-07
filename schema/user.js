@@ -82,6 +82,10 @@ var feature = new Schema({
   country: String,
   price: String,
   image: String,
+  coverimage: String,
+  detail: String,
+  topic: String,
+  topic2: String,
 })
 
 
