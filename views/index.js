@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
+var { Feature } = require("../schema/user");
+
 router.get("/", function (req, res, next) {
   res.render("index");
 });
@@ -28,14 +30,16 @@ router.get("/howtowork", function (req, res, next) {
 router.get("/featuredestination", function (req, res, next) {
   res.render("featuredestination");
 });
-router.get("/featureprogramm", function (req, res, next) {
-  res.render("featureprogramm");
+router.get("/featureprogram", function (req, res, next) {
+  Feature.find().exec((err,doc)=>{
+    res.render('featureprogram',{featureprogram:doc})
+    console.log(err);
+  })
 });
+
 router.get("/allprogram", function (req, res, next) {
   res.render("program");
 });
-
-
 
 
 module.exports = router;
