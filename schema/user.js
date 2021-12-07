@@ -88,12 +88,20 @@ var feature = new Schema({
   topic2: String,
 })
 
+var destination = new Schema({
+  country : String,
+  image : String,
+  info : String,
+})
+
 
 // สร้างและส่งออกโมเดล
 exports.Users = mongoose.model("users", myuser);
 exports.Contact = mongoose.model("contactus", mycontact);
 exports.Apply = mongoose.model("applyuser", userapply);
-exports.Feature = mongoose.model("featureprogram", feature )
+exports.Feature = mongoose.model("featureprogram", feature);
+exports.Destination = mongoose.model("featuredestination", destination);
+
 //ออกแบบฟังก์ชั่นสำหรับบันทึกข้อมูล
 exports.saveProduct = function (model, data) {
   model.save(data);
