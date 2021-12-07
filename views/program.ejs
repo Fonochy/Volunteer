@@ -1,752 +1,850 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" type="text/css" href="css/stylev.css" />
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
-      </script>
-     
-      <title>Volunteer</title>
-    
-      <nav class="navbar navbar-expand-lg navbar fixed-top navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="img/imgv/logo_transparent.png" width="100" height="100" alt="">
-              </a>
-        <div class="collapse navbar-collapse nav justify-content-end navi" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item ">
-              <a class="nav-link" href="/">Home</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About</a>
-                 <ul class="dropdown-menu">
-                    <li><a href="/aboutus" class="dropdown-item">About Us</a></li>
-                    <li><a href="/contactus" class="dropdown-item">Contact Us</a></li>
-                    <li><a href="/howtowork" class="dropdown-item">How to work</a></li>
-                    <li><a href="/allprogram" class="dropdown-item">All Programs</a></li>
-                  </ul>
-            </li>
-    
-            <li class="nav-item">
-              <a class="nav-link" href="/apply">Apply</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/signin">Sign In</a>
-            </li>
-          </ul>
-        </div>
-    </div>
-    </nav>
-    
-    </head>
-    
-    <body>
-      
-      <br><br><br><br><br><br>
-    <div class="container">
-        <!-- Middle image -->
-        <img src="img/imgv/VolunteerBannerFull.jpg" class="img-fluid text-align-center" alt="Responsive image">
-    </div>
-      <hr>
-      <div class="container py-3">
-        <div class="card ">
-          <div class="row ">
-            <div class="col-md-6" style="background-color: #FAEEEE;">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="img/imgv/dog.jpg" class="img-fluid imgsize" alt="Responsive image"></a>
-                  </div>
-                </div>
-              </div>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/stylev.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+  </script>
 
-            <div class="col-md-6 px-4" style="background-color: #FAEEEE;">
-              <div class="card-block px-6">
-                <h4 class="card-title topic">Animal Rescue</h4>
-                <br>
-                <div class="container" >  
-                  <table class="table table-borderless">
-                    <div class="row table-responsive">
-                      <div class="col-2 num-container ">
+  <title>Volunteer</title>
+  <%- include ('components/navbar.ejs') %>
+
+</head>
+
+<body>
+
+  <br><br><br><br><br><br>
+  <div class="container">
+    <!-- Middle image -->
+    <img src="img/imgv/VolunteerBannerFull.jpg" class="img-fluid text-align-center" alt="Responsive image">
+  </div>
+  <hr>
+  <div class="container py-3">
+    <div class="card ">
+      <div class="row ">
+        <div class="col-md-6" style="background-color: #FAEEEE;">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/imgv/dog.jpg" class="img-fluid imgsize" alt="Responsive image"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 px-4" style="background-color: #FAEEEE;">
+          <div class="card-block px-6">
+            <h4 class="card-title topic">Animal Rescue</h4>
+            <br>
+            <div class="container">
+              <table class="table table-borderless">
+                <div class="row table-responsive">
+                  <div class="col-2 num-container ">
                     <tbody>
-                        <tr class="row1">
-                            <td><img src="img/imgv/gps1.png"  class="icon1" alt="Responsive image"></td>
-                            <td><p class="n1">Buenos Aires, Argentina</p></td>
-                            
-                        </tr>
-                        <tr class="row2 ">
-                          <td><img src="img/imgv/time.png"  class="icon1" alt="Responsive image"></td>
-                          <td><p class="n1">1 week</p></td>
-                        </tr>
-                        <tr class="row3">
-                          <td><img src="img/imgv/home.png"  class="icon1" alt="Responsive image"></td>
-                          <td><p class="n1">Volunteer House</p></td>
-                        </tr>
-                        <tr class="row4">
-                          <td><img src="img/imgv/money.png"  class="icon1" alt="Responsive image"></td>
-                          <td><p class="n1">USD 619 $</p></td>
-                        </tr>
-                        <tr class="row5">
-                          <td><img src="img/imgv/human.png"  class="icon1" alt="Responsive image"></td>
-                          <td><p class="n1">18+</p></td>
-                        </tr>
-                        <tr class="row6">
-                         
-                            <td><img src="img/imgv/info.png"  class="icon1" alt="Responsive image"></td>
-                            <td><p>This wonderful program’s aim is to simply provide care to animals in need...</p></td>
-                        </tr>
-                    </tbody>
-                      </div>
-                      </div>
-                  </table>
-                </div>
-                <a href="#" class="mt-auto b1 btn btn-primary  ">Read More</a>
-              </div>
-            </div>
-          </div>
-         </div>
-        </div> 
+                      <tr class="row1">
+                        <td><img src="img/imgv/gps1.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">Buenos Aires, Argentina</p>
+                        </td>
 
-      <div class="container py-3">
-        <div class="card ">
-          <div class="row ">
-            <div class="col-md-6" style="background-color: #FAEEEE;">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="img/imgv/kenya1.jpg" class="img-fluid imgsize" alt="Responsive image"></a>
+                      </tr>
+                      <tr class="row2 ">
+                        <td><img src="img/imgv/time.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">1 week</p>
+                        </td>
+                      </tr>
+                      <tr class="row3">
+                        <td><img src="img/imgv/home.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">Volunteer House</p>
+                        </td>
+                      </tr>
+                      <tr class="row4">
+                        <td><img src="img/imgv/money.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">USD 619 $</p>
+                        </td>
+                      </tr>
+                      <tr class="row5">
+                        <td><img src="img/imgv/human.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">18+</p>
+                        </td>
+                      </tr>
+                      <tr class="row6">
+
+                        <td><img src="img/imgv/info.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p>This wonderful program’s aim is to simply provide care to animals in need...</p>
+                        </td>
+                      </tr>
+                    </tbody>
                   </div>
                 </div>
-              </div>
+              </table>
+            </div>
+            <a href="#" class="mt-auto b1 btn btn-primary  ">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-            <div class="col-md-6 px-4" style="background-color: #FAEEEE;">
-              <div class="card-block px-6">
-                <h4 class="card-title topic">Childcare & Development</h4>
-                <br>
-                <div class="container" >  
-                  <table class="table table-borderless">
-                    <div class="row table-responsive">
-                      <div class="col-2 num-container ">
+  <div class="container py-3">
+    <div class="card ">
+      <div class="row ">
+        <div class="col-md-6" style="background-color: #FAEEEE;">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/imgv/kenya1.jpg" class="img-fluid imgsize" alt="Responsive image"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 px-4" style="background-color: #FAEEEE;">
+          <div class="card-block px-6">
+            <h4 class="card-title topic">Childcare & Development</h4>
+            <br>
+            <div class="container">
+              <table class="table table-borderless">
+                <div class="row table-responsive">
+                  <div class="col-2 num-container ">
                     <tbody>
-                        <tr class="row1">
-                            <td><img src="img/imgv/gps1.png"  class="icon1" alt="Responsive image"></td>
-                            <td><p class="n1">Nairobi, Kenya</p></td>
-                            
-                        </tr>
-                        <tr class="row2 ">
-                          <td><img src="img/imgv/time.png"  class="icon1" alt="Responsive image"></td>
-                          <td><p class="n1">3 weeks</p></td>
-                        </tr>
-                        <tr class="row3">
-                          <td><img src="img/imgv/home.png"  class="icon1" alt="Responsive image"></td>
-                          <td><p class="n1">Volunteer House</p></td>
-                        </tr>
-                        <tr class="row4">
-                          <td><img src="img/imgv/money.png"  class="icon1" alt="Responsive image"></td>
-                          <td><p class="n1">USD 299 $</p></td>
-                        </tr>
-                        <tr class="row5">
-                          <td><img src="img/imgv/human.png"  class="icon1" alt="Responsive image"></td>
-                          <td><p class="n1">18+</p></td>
-                        </tr>
-                        <tr class="row6">
-                         
-                            <td><img src="img/imgv/info.png"  class="icon1" alt="Responsive image"></td>
-                            <td><p>Join our programs to care for the needy and impoverished children of Tanzania. The community childcare…</p></td>
-                        </tr>
+                      <tr class="row1">
+                        <td><img src="img/imgv/gps1.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">Nairobi, Kenya</p>
+                        </td>
+
+                      </tr>
+                      <tr class="row2 ">
+                        <td><img src="img/imgv/time.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">3 weeks</p>
+                        </td>
+                      </tr>
+                      <tr class="row3">
+                        <td><img src="img/imgv/home.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">Volunteer House</p>
+                        </td>
+                      </tr>
+                      <tr class="row4">
+                        <td><img src="img/imgv/money.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">USD 299 $</p>
+                        </td>
+                      </tr>
+                      <tr class="row5">
+                        <td><img src="img/imgv/human.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">18+</p>
+                        </td>
+                      </tr>
+                      <tr class="row6">
+
+                        <td><img src="img/imgv/info.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p>Join our programs to care for the needy and impoverished children of Tanzania. The
+                            community childcare…</p>
+                        </td>
+                      </tr>
                     </tbody>
-                      </div>
-                      </div>
-                  </table>
+                  </div>
                 </div>
-                <a href="#" class="mt-auto b1 btn btn-primary  ">Read More</a>
-              </div>
+              </table>
+            </div>
+            <a href="#" class="mt-auto b1 btn btn-primary  ">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container py-3">
+    <div class="card ">
+      <div class="row ">
+        <div class="col-md-6" style="background-color: #FAEEEE;">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/imgv/childafrica.jpg" class="img-fluid imgsize" alt="Responsive image"></a>
             </div>
           </div>
-         </div>
         </div>
 
-        <div class="container py-3">
-          <div class="card ">
-            <div class="row ">
-              <div class="col-md-6" style="background-color: #FAEEEE;">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="img/imgv/childafrica.jpg" class="img-fluid imgsize" alt="Responsive image"></a>
-                    </div>
+        <div class="col-md-6 px-4" style="background-color: #FAEEEE;">
+          <div class="card-block px-6">
+            <h4 class="card-title topic">Childcare & Development</h4>
+            <br>
+            <div class="container">
+              <table class="table table-borderless">
+                <div class="row table-responsive">
+                  <div class="col-2 num-container ">
+                    <tbody>
+                      <tr class="row1">
+                        <td><img src="img/imgv/gps1.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">Capetown, South Africa</p>
+                        </td>
+
+                      </tr>
+                      <tr class="row2 ">
+                        <td><img src="img/imgv/time.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">3 weeks</p>
+                        </td>
+                      </tr>
+                      <tr class="row3">
+                        <td><img src="img/imgv/home.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">Host Family</p>
+                        </td>
+                      </tr>
+                      <tr class="row4">
+                        <td><img src="img/imgv/money.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">USD 529 $</p>
+                        </td>
+                      </tr>
+                      <tr class="row5">
+                        <td><img src="img/imgv/human.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">18+</p>
+                        </td>
+                      </tr>
+                      <tr class="row6">
+                        <td><img src="img/imgv/info.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p>This program makes a truly positive impact on impoverished children and their families.
+                            Volunteers are desperately sought to help this program implement a…</p>
+                        </td>
+                      </tr>
+                    </tbody>
                   </div>
                 </div>
-  
-              <div class="col-md-6 px-4" style="background-color: #FAEEEE;">
-                <div class="card-block px-6">
-                  <h4 class="card-title topic">Childcare & Development</h4>
-                  <br>
-                  <div class="container" >  
-                    <table class="table table-borderless">
-                      <div class="row table-responsive">
-                        <div class="col-2 num-container ">
-                      <tbody>
-                          <tr class="row1">
-                              <td><img src="img/imgv/gps1.png"  class="icon1" alt="Responsive image"></td>
-                              <td><p class="n1">Capetown, South Africa</p></td>
-                              
-                          </tr>
-                          <tr class="row2 ">
-                            <td><img src="img/imgv/time.png"  class="icon1" alt="Responsive image"></td>
-                            <td><p class="n1">3 weeks</p></td>
-                          </tr>
-                          <tr class="row3">
-                            <td><img src="img/imgv/home.png"  class="icon1" alt="Responsive image"></td>
-                            <td><p class="n1">Host Family</p></td>
-                          </tr>
-                          <tr class="row4">
-                            <td><img src="img/imgv/money.png"  class="icon1" alt="Responsive image"></td>
-                            <td><p class="n1">USD 529 $</p></td>
-                          </tr>
-                          <tr class="row5">
-                            <td><img src="img/imgv/human.png"  class="icon1" alt="Responsive image"></td>
-                            <td><p class="n1">18+</p></td>
-                          </tr>
-                          <tr class="row6">
-                              <td><img src="img/imgv/info.png"  class="icon1" alt="Responsive image"></td>
-                              <td><p>This program makes a truly positive impact on impoverished children and their families. Volunteers are desperately sought to help this program implement a…</p></td>
-                          </tr>
-                      </tbody>
-                        </div>
-                        </div>
-                    </table>
-                  </div>
-                  <a href="#" class="mt-auto b1 btn btn-primary  ">Read More</a>
-                </div>
-              </div>
+              </table>
             </div>
-           </div>
-          </div> 
-
-          <div class="container py-3">
-            <div class="card ">
-              <div class="row ">
-                <div class="col-md-6" style="background-color: #FAEEEE;">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="img/imgv/childthai.jpg" class="img-fluid imgsize" alt="Responsive image"></a>
-                      </div>
-                    </div>
-                  </div>
-    
-                <div class="col-md-6 px-4" style="background-color: #FAEEEE;">
-                  <div class="card-block px-6">
-                    <h4 class="card-title topic">Childcare & Development</h4>
-                    <br>
-                    <div class="container" >  
-                      <table class="table table-borderless">
-                        <div class="row table-responsive">
-                          <div class="col-2 num-container ">
-                        <tbody>
-                            <tr class="row1">
-                                <td><img src="img/imgv/gps1.png"  class="icon1" alt="Responsive image"></td>
-                                <td><p class="n1">Chiang Mai, Thailand</p></td>
-                                
-                            </tr>
-                            <tr class="row2 ">
-                              <td><img src="img/imgv/time.png"  class="icon1" alt="Responsive image"></td>
-                              <td><p class="n1">2 weeks</p></td>
-                            </tr>
-                            <tr class="row3">
-                              <td><img src="img/imgv/home.png"  class="icon1" alt="Responsive image"></td>
-                              <td><p class="n1">Volunteer House</p></td>
-                            </tr>
-                            <tr class="row4">
-                              <td><img src="img/imgv/money.png"  class="icon1" alt="Responsive image"></td>
-                              <td><p class="n1">USD 699 $</p></td>
-                            </tr>
-                            <tr class="row5">
-                              <td><img src="img/imgv/human.png"  class="icon1" alt="Responsive image"></td>
-                              <td><p class="n1">18+</p></td>
-                            </tr>
-                            <tr class="row6">
-                             
-                                <td><img src="img/imgv/info.png"  class="icon1" alt="Responsive image"></td>
-                                <td><p>The exotic northern city of Chiang Mai is the location for this essential program working with at-risk children. As a result of extreme poverty in ethnic minority villages…</p></td>
-                            </tr>
-                        </tbody>
-                          </div>
-                          </div>
-                      </table>
-                    </div>
-                    <a href="#" class="mt-auto b1 btn btn-primary  ">Read More</a>
-                  </div>
-                </div>
-              </div>
-             </div>
-            </div> 
-
-            <div class="container py-3">
-              <div class="card ">
-                <div class="row ">
-                  <div class="col-md-6" style="background-color: #FAEEEE;">
-                      <div class="carousel-inner">
-                        <div class="carousel-item active">
-                          <img src="img/imgv/childnepal.jpg" class="img-fluid imgsize" alt="Responsive image"></a>
-                        </div>
-                      </div>
-                    </div>
-      
-                  <div class="col-md-6 px-4" style="background-color: #FAEEEE;">
-                    <div class="card-block px-6">
-                      <h4 class="card-title topic">Childcare & Development</h4>
-                      <br>
-                      <div class="container" >  
-                        <table class="table table-borderless">
-                          <div class="row table-responsive">
-                            <div class="col-2 num-container ">
-                          <tbody>
-                              <tr class="row1">
-                                  <td><img src="img/imgv/gps1.png"  class="icon1" alt="Responsive image"></td>
-                                  <td><p class="n1">Kathmandu, Nepal</p></td>
-                                  
-                              </tr>
-                              <tr class="row2 ">
-                                <td><img src="img/imgv/time.png"  class="icon1" alt="Responsive image"></td>
-                                <td><p class="n1">2 weeks</p></td>
-                              </tr>
-                              <tr class="row3">
-                                <td><img src="img/imgv/home.png"  class="icon1" alt="Responsive image"></td>
-                                <td><p class="n1">Host Family</p></td>
-                              </tr>
-                              <tr class="row4">
-                                <td><img src="img/imgv/money.png"  class="icon1" alt="Responsive image"></td>
-                                <td><p class="n1">USD 529 $</p></td>
-                              </tr>
-                              <tr class="row5">
-                                <td><img src="img/imgv/human.png"  class="icon1" alt="Responsive image"></td>
-                                <td><p class="n1">18+</p></td>
-                              </tr>
-                              <tr class="row6">
-                               
-                                  <td><img src="img/imgv/info.png"  class="icon1" alt="Responsive image"></td>
-                                  <td><p>This essential program works with society's most vulnerable. Based in the magical city of Kathmandu, volunteers will be working with children…</p></td>
-                              </tr>
-                          </tbody>
-                            </div>
-                            </div>
-                        </table>
-                      </div>
-                      <a href="#" class="mt-auto b1 btn btn-primary  ">Read More</a>
-                    </div>
-                  </div>
-                </div>
-               </div>
-              </div> 
-
-              <div class="container py-3">
-                <div class="card ">
-                  <div class="row ">
-                    <div class="col-md-6" style="background-color: #FAEEEE;">
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img src="img/imgv/childzimbabwe.jpg" class="img-fluid imgsize" alt="Responsive image"></a>
-                          </div>
-                        </div>
-                      </div>
-        
-                    <div class="col-md-6 px-4" style="background-color: #FAEEEE;">
-                      <div class="card-block px-6">
-                        <h4 class="card-title topic">Childcare & Development</h4>
-                        <br>
-                        <div class="container" >  
-                          <table class="table table-borderless">
-                            <div class="row table-responsive">
-                              <div class="col-2 num-container ">
-                            <tbody>
-                                <tr class="row1">
-                                    <td><img src="img/imgv/gps1.png"  class="icon1" alt="Responsive image"></td>
-                                    <td><p class="n1">Victoria Falls, Zimbabwe</p></td>
-                                    
-                                </tr>
-                                <tr class="row2 ">
-                                  <td><img src="img/imgv/time.png"  class="icon1" alt="Responsive image"></td>
-                                  <td><p class="n1">1 week</p></td>
-                                </tr>
-                                <tr class="row3">
-                                  <td><img src="img/imgv/home.png"  class="icon1" alt="Responsive image"></td>
-                                  <td><p class="n1">Volunteer House</p></td>
-                                </tr>
-                                <tr class="row4">
-                                  <td><img src="img/imgv/money.png"  class="icon1" alt="Responsive image"></td>
-                                  <td><p class="n1">USD 439 $</p></td>
-                                </tr>
-                                <tr class="row5">
-                                  <td><img src="img/imgv/human.png"  class="icon1" alt="Responsive image"></td>
-                                  <td><p class="n1">18+</p></td>
-                                </tr>
-                                <tr class="row6">
-                                    <td><img src="img/imgv/info.png"  class="icon1" alt="Responsive image"></td>
-                                    <td><p>This program aims to provide care and shelter for at-risk…</p></td>
-                                </tr>
-                            </tbody>
-                              </div>
-                              </div>
-                          </table>
-                        </div>
-                        <a href="#" class="mt-auto b1 btn btn-primary  ">Read More</a>
-                      </div>
-                    </div>
-                  </div>
-                 </div>
-                </div> 
-            
-                <div class="container py-3">
-                  <div class="card ">
-                    <div class="row ">
-                      <div class="col-md-6" style="background-color: #FAEEEE;">
-                          <div class="carousel-inner">
-                            <div class="carousel-item active">
-                              <img src="img/imgv/childvietnam.jpg" class="img-fluid imgsize" alt="Responsive image"></a>
-                            </div>
-                          </div>
-                        </div>
-          
-                      <div class="col-md-6 px-4" style="background-color: #FAEEEE;">
-                        <div class="card-block px-6">
-                          <h4 class="card-title topic">Childcare & Development</h4>
-                          <br>
-                          <div class="container" >  
-                            <table class="table table-borderless">
-                              <div class="row table-responsive">
-                                <div class="col-2 num-container ">
-                              <tbody>
-                                  <tr class="row1">
-                                      <td><img src="img/imgv/gps1.png"  class="icon1" alt="Responsive image"></td>
-                                      <td><p class="n1">Ho Chi Minh City, Vietnam</p></td>
-                                      
-                                  </tr>
-                                  <tr class="row2 ">
-                                    <td><img src="img/imgv/time.png"  class="icon1" alt="Responsive image"></td>
-                                    <td><p class="n1">2 weeks</p></td>
-                                  </tr>
-                                  <tr class="row3">
-                                    <td><img src="img/imgv/home.png"  class="icon1" alt="Responsive image"></td>
-                                    <td><p class="n1">Volunteer House</p></td>
-                                  </tr>
-                                  <tr class="row4">
-                                    <td><img src="img/imgv/money.png"  class="icon1" alt="Responsive image"></td>
-                                    <td><p class="n1">USD 739 $</p></td>
-                                  </tr>
-                                  <tr class="row5">
-                                    <td><img src="img/imgv/human.png"  class="icon1" alt="Responsive image"></td>
-                                    <td><p class="n1">18+</p></td>
-                                  </tr>
-                                  <tr class="row6">
-                                      <td><img src="img/imgv/info.png"  class="icon1" alt="Responsive image"></td>
-                                      <td><p>This amazing program will warm the heart of any international volunteer with a love for working with children and helping those in true need. Volunteers on…</p></td>
-                                  </tr>
-                              </tbody>
-                                </div>
-                                </div>
-                            </table>
-                          </div>
-                          <a href="#" class="mt-auto b1 btn btn-primary  ">Read More</a>
-                        </div>
-                      </div>
-                    </div>
-                   </div>
-                  </div> 
-
-                  <div class="container py-3">
-                    <div class="card ">
-                      <div class="row ">
-                        <div class="col-md-6" style="background-color: #FAEEEE;">
-                            <div class="carousel-inner">
-                              <div class="carousel-item active">
-                                <img src="img/imgv/childvietnam.jpg" class="img-fluid imgsize" alt="Responsive image"></a>
-                              </div>
-                            </div>
-                          </div>
-            
-                        <div class="col-md-6 px-4" style="background-color: #FAEEEE;">
-                          <div class="card-block px-6">
-                            <h4 class="card-title topic">Disabilities & Special Needs</h4>
-                            <br>
-                            <div class="container" >  
-                              <table class="table table-borderless">
-                                <div class="row table-responsive">
-                                  <div class="col-2 num-container ">
-                                <tbody>
-                                    <tr class="row1">
-                                        <td><img src="img/imgv/gps1.png"  class="icon1" alt="Responsive image"></td>
-                                        <td><p class="n1">Cusco, Peru</p></td>
-                                        
-                                    </tr>
-                                    <tr class="row2 ">
-                                      <td><img src="img/imgv/time.png"  class="icon1" alt="Responsive image"></td>
-                                      <td><p class="n1">2 weeks</p></td>
-                                    </tr>
-                                    <tr class="row3">
-                                      <td><img src="img/imgv/home.png"  class="icon1" alt="Responsive image"></td>
-                                      <td><p class="n1">Host Family</p></td>
-                                    </tr>
-                                    <tr class="row4">
-                                      <td><img src="img/imgv/money.png"  class="icon1" alt="Responsive image"></td>
-                                      <td><p class="n1">USD 479 $</p></td>
-                                    </tr>
-                                    <tr class="row5">
-                                      <td><img src="img/imgv/human.png"  class="icon1" alt="Responsive image"></td>
-                                      <td><p class="n1">18+</p></td>
-                                    </tr>
-                                    <tr class="row6">
-                                        <td><img src="img/imgv/info.png"  class="icon1" alt="Responsive image"></td>
-                                        <td><p>Volunteers provide much-needed support and assistance to children and young adults at…</p></td>
-                                    </tr>
-                                </tbody>
-                                  </div>
-                                  </div>
-                              </table>
-                            </div>
-                            <a href="#" class="mt-auto b1 btn btn-primary  ">Read More</a>
-                          </div>
-                        </div>
-                      </div>
-                     </div>
-                    </div> 
-
-                    <div class="container py-3">
-                      <div class="card ">
-                        <div class="row ">
-                          <div class="col-md-6" style="background-color: #FAEEEE;">
-                              <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                  <img src="img/imgv/childvietnam.jpg" class="img-fluid imgsize" alt="Responsive image"></a>
-                                </div>
-                              </div>
-                            </div>
-              
-                          <div class="col-md-6 px-4" style="background-color: #FAEEEE;">
-                            <div class="card-block px-6">
-                              <h4 class="card-title topic">Education Support</h4>
-                              <br>
-                              <div class="container" >  
-                                <table class="table table-borderless">
-                                  <div class="row table-responsive">
-                                    <div class="col-2 num-container ">
-                                  <tbody>
-                                      <tr class="row1">
-                                          <td><img src="img/imgv/gps1.png"  class="icon1" alt="Responsive image"></td>
-                                          <td><p class="n1">Luang Prabang, Laos</p></td>
-                                          
-                                      </tr>
-                                      <tr class="row2 ">
-                                        <td><img src="img/imgv/time.png"  class="icon1" alt="Responsive image"></td>
-                                        <td><p class="n1">1 weeks</p></td>
-                                      </tr>
-                                      <tr class="row3">
-                                        <td><img src="img/imgv/home.png"  class="icon1" alt="Responsive image"></td>
-                                        <td><p class="n1">Guest House</p></td>
-                                      </tr>
-                                      <tr class="row4">
-                                        <td><img src="img/imgv/money.png"  class="icon1" alt="Responsive image"></td>
-                                        <td><p class="n1">USD 319 $</p></td>
-                                      </tr>
-                                      <tr class="row5">
-                                        <td><img src="img/imgv/human.png"  class="icon1" alt="Responsive image"></td>
-                                        <td><p class="n1">18+</p></td>
-                                      </tr>
-                                      <tr class="row6">
-                                          <td><img src="img/imgv/info.png"  class="icon1" alt="Responsive image"></td>
-                                          <td><p>This exciting project was created with the goal of helping to improve the English-speaking abilities of the residents…</p></td>
-                                      </tr>
-                                  </tbody>
-                                    </div>
-                                    </div>
-                                </table>
-                              </div>
-                              <a href="#" class="mt-auto b1 btn btn-primary  ">Read More</a>
-                            </div>
-                          </div>
-                        </div>
-                       </div>
-                      </div> 
-
-                      <div class="container py-3">
-                        <div class="card ">
-                          <div class="row ">
-                            <div class="col-md-6" style="background-color: #FAEEEE;">
-                                <div class="carousel-inner">
-                                  <div class="carousel-item active">
-                                    <img src="img/imgv/childvietnam.jpg" class="img-fluid imgsize" alt="Responsive image"></a>
-                                  </div>
-                                </div>
-                              </div>
-                
-                            <div class="col-md-6 px-4" style="background-color: #FAEEEE;">
-                              <div class="card-block px-6">
-                                <h4 class="card-title topic">Childcare & Development</h4>
-                                <br>
-                                <div class="container" >  
-                                  <table class="table table-borderless">
-                                    <div class="row table-responsive">
-                                      <div class="col-2 num-container ">
-                                    <tbody>
-                                        <tr class="row1">
-                                            <td><img src="img/imgv/gps1.png"  class="icon1" alt="Responsive image"></td>
-                                            <td><p class="n1">Ho Chi Minh City, Vietnam</p></td>
-                                            
-                                        </tr>
-                                        <tr class="row2 ">
-                                          <td><img src="img/imgv/time.png"  class="icon1" alt="Responsive image"></td>
-                                          <td><p class="n1">2 weeks</p></td>
-                                        </tr>
-                                        <tr class="row3">
-                                          <td><img src="img/imgv/home.png"  class="icon1" alt="Responsive image"></td>
-                                          <td><p class="n1">Volunteer House</p></td>
-                                        </tr>
-                                        <tr class="row4">
-                                          <td><img src="img/imgv/money.png"  class="icon1" alt="Responsive image"></td>
-                                          <td><p class="n1">USD 739 $</p></td>
-                                        </tr>
-                                        <tr class="row5">
-                                          <td><img src="img/imgv/human.png"  class="icon1" alt="Responsive image"></td>
-                                          <td><p class="n1">18+</p></td>
-                                        </tr>
-                                        <tr class="row6">
-                                            <td><img src="img/imgv/info.png"  class="icon1" alt="Responsive image"></td>
-                                            <td><p>This amazing program will warm the heart of any international volunteer with a love for working with children and helping those in true need. Volunteers on…</p></td>
-                                        </tr>
-                                    </tbody>
-                                      </div>
-                                      </div>
-                                  </table>
-                                </div>
-                                <a href="#" class="mt-auto b1 btn btn-primary  ">Read More</a>
-                              </div>
-                            </div>
-                          </div>
-                         </div>
-                        </div> 
-      </div>
-      <a href="#" class="previous round text-center">&#8249;</a>
-      <a href="#" class="next round text-center">&#8250;</a>
-    </body>
-    
-    <!-- Footer -->
-    <footer class="text-center text-lg-start text-muted;">
-      <!-- Section: Social media -->
-      <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-        <!-- Left -->
-        <div class="me-5 d-none d-lg-block">
-          <span>Get connected with us on social networks:</span>
-        </div>
-        <!-- Left -->
-    
-        <!-- Right -->
-        <div>
-          <a href="" class="me-4 text-reset">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="" class="me-4 text-reset">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="" class="me-4 text-reset">
-            <i class="fab fa-google"></i>
-          </a>
-          <a href="" class="me-4 text-reset">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="" class="me-4 text-reset">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="" class="me-4 text-reset">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-        <!-- Right -->
-      </section>
-      <!-- Section: Social media -->
-    
-      <!-- Section: Links  -->
-      <section class="">
-        <div class="container text-center text-md-start mt-5">
-          <!-- Grid row -->
-          <div class="row mt-3">
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-              <!-- Content -->
-              <h6 class="text-uppercase fw-bold mb-4">
-                <i class="fas fa-gem "></i>About Us
-              </h6>
-              <p>
-                Our website collects places around the world that need help and volunteers can find for places that they
-                want to go , providing opportunities to help those in need and enhance the quality of life in that places.
-              </p>
-            </div>
-            <!-- Grid column -->
-    
-            <!-- Grid column -->
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-              <!-- Links -->
-              <h6 class="text-uppercase fw-bold mb-4">
-                Blogs
-              </h6>
-              <p>
-                <a href="#!" class="text-reset">United State</a>
-              </p>
-              <p>
-                <a href="#!" class="text-reset">France</a>
-              </p>
-              <p>
-                <a href="#!" class="text-reset">Thailand</a>
-              </p>
-              <p>
-                <a href="#!" class="text-reset">Vietnam</a>
-              </p>
-            </div>
-            <!-- Grid column -->
-    
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-              <!-- Content -->
-              <h6 class="text-uppercase fw-bold mb-4">
-                <i class="fas fa-gem "></i>Customer Relationship
-              </h6>
-              <p>
-                20 RAKAU GROVEES, STOKES VALLEY, WELLINGTON, NEW ZEALAND
-              </p>
-            </div>
-            <!-- Grid column -->
-    
-            <!-- Grid column -->
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-              <!-- Links -->
-              <h6 class="text-uppercase fw-bold mb-4">
-                Contact Us
-              </h6>
-              <p><i class="fas fa-home me-3"></i> WELLINGTON, NEW ZEALAND</p>
-              <p>
-                <i class="fas fa-envelope me-3"></i>
-                nattinee.nu@gmail.com
-              </p>
-              <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-              <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
-            </div>
-            <!-- Grid column -->
+            <a href="#" class="mt-auto b1 btn btn-primary  ">Read More</a>
           </div>
-          <!-- Grid row -->
         </div>
-      </section>
-      <!-- Section: Links  -->
-    
-      <!-- Copyright -->
-      <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-        © 2021 Copyright:
-        <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
       </div>
-      <!-- Copyright -->
-    </footer>
-    <!-- Footer -->
-    
-    
-    </html>
+    </div>
+  </div>
+
+  <div class="container py-3">
+    <div class="card ">
+      <div class="row ">
+        <div class="col-md-6" style="background-color: #FAEEEE;">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/imgv/childthai.jpg" class="img-fluid imgsize" alt="Responsive image"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 px-4" style="background-color: #FAEEEE;">
+          <div class="card-block px-6">
+            <h4 class="card-title topic">Childcare & Development</h4>
+            <br>
+            <div class="container">
+              <table class="table table-borderless">
+                <div class="row table-responsive">
+                  <div class="col-2 num-container ">
+                    <tbody>
+                      <tr class="row1">
+                        <td><img src="img/imgv/gps1.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">Chiang Mai, Thailand</p>
+                        </td>
+
+                      </tr>
+                      <tr class="row2 ">
+                        <td><img src="img/imgv/time.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">2 weeks</p>
+                        </td>
+                      </tr>
+                      <tr class="row3">
+                        <td><img src="img/imgv/home.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">Volunteer House</p>
+                        </td>
+                      </tr>
+                      <tr class="row4">
+                        <td><img src="img/imgv/money.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">USD 699 $</p>
+                        </td>
+                      </tr>
+                      <tr class="row5">
+                        <td><img src="img/imgv/human.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">18+</p>
+                        </td>
+                      </tr>
+                      <tr class="row6">
+
+                        <td><img src="img/imgv/info.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p>The exotic northern city of Chiang Mai is the location for this essential program working
+                            with at-risk children. As a result of extreme poverty in ethnic minority villages…</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </div>
+                </div>
+              </table>
+            </div>
+            <a href="#" class="mt-auto b1 btn btn-primary  ">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container py-3">
+    <div class="card ">
+      <div class="row ">
+        <div class="col-md-6" style="background-color: #FAEEEE;">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/imgv/childnepal.jpg" class="img-fluid imgsize" alt="Responsive image"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 px-4" style="background-color: #FAEEEE;">
+          <div class="card-block px-6">
+            <h4 class="card-title topic">Childcare & Development</h4>
+            <br>
+            <div class="container">
+              <table class="table table-borderless">
+                <div class="row table-responsive">
+                  <div class="col-2 num-container ">
+                    <tbody>
+                      <tr class="row1">
+                        <td><img src="img/imgv/gps1.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">Kathmandu, Nepal</p>
+                        </td>
+
+                      </tr>
+                      <tr class="row2 ">
+                        <td><img src="img/imgv/time.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">2 weeks</p>
+                        </td>
+                      </tr>
+                      <tr class="row3">
+                        <td><img src="img/imgv/home.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">Host Family</p>
+                        </td>
+                      </tr>
+                      <tr class="row4">
+                        <td><img src="img/imgv/money.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">USD 529 $</p>
+                        </td>
+                      </tr>
+                      <tr class="row5">
+                        <td><img src="img/imgv/human.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">18+</p>
+                        </td>
+                      </tr>
+                      <tr class="row6">
+
+                        <td><img src="img/imgv/info.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p>This essential program works with society's most vulnerable. Based in the magical city of
+                            Kathmandu, volunteers will be working with children…</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </div>
+                </div>
+              </table>
+            </div>
+            <a href="#" class="mt-auto b1 btn btn-primary  ">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container py-3">
+    <div class="card ">
+      <div class="row ">
+        <div class="col-md-6" style="background-color: #FAEEEE;">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/imgv/childzimbabwe.jpg" class="img-fluid imgsize" alt="Responsive image"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 px-4" style="background-color: #FAEEEE;">
+          <div class="card-block px-6">
+            <h4 class="card-title topic">Childcare & Development</h4>
+            <br>
+            <div class="container">
+              <table class="table table-borderless">
+                <div class="row table-responsive">
+                  <div class="col-2 num-container ">
+                    <tbody>
+                      <tr class="row1">
+                        <td><img src="img/imgv/gps1.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">Victoria Falls, Zimbabwe</p>
+                        </td>
+
+                      </tr>
+                      <tr class="row2 ">
+                        <td><img src="img/imgv/time.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">1 week</p>
+                        </td>
+                      </tr>
+                      <tr class="row3">
+                        <td><img src="img/imgv/home.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">Volunteer House</p>
+                        </td>
+                      </tr>
+                      <tr class="row4">
+                        <td><img src="img/imgv/money.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">USD 439 $</p>
+                        </td>
+                      </tr>
+                      <tr class="row5">
+                        <td><img src="img/imgv/human.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">18+</p>
+                        </td>
+                      </tr>
+                      <tr class="row6">
+                        <td><img src="img/imgv/info.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p>This program aims to provide care and shelter for at-risk…</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </div>
+                </div>
+              </table>
+            </div>
+            <a href="#" class="mt-auto b1 btn btn-primary  ">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container py-3">
+    <div class="card ">
+      <div class="row ">
+        <div class="col-md-6" style="background-color: #FAEEEE;">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/imgv/childvietnam.jpg" class="img-fluid imgsize" alt="Responsive image"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 px-4" style="background-color: #FAEEEE;">
+          <div class="card-block px-6">
+            <h4 class="card-title topic">Childcare & Development</h4>
+            <br>
+            <div class="container">
+              <table class="table table-borderless">
+                <div class="row table-responsive">
+                  <div class="col-2 num-container ">
+                    <tbody>
+                      <tr class="row1">
+                        <td><img src="img/imgv/gps1.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">Ho Chi Minh City, Vietnam</p>
+                        </td>
+
+                      </tr>
+                      <tr class="row2 ">
+                        <td><img src="img/imgv/time.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">2 weeks</p>
+                        </td>
+                      </tr>
+                      <tr class="row3">
+                        <td><img src="img/imgv/home.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">Volunteer House</p>
+                        </td>
+                      </tr>
+                      <tr class="row4">
+                        <td><img src="img/imgv/money.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">USD 739 $</p>
+                        </td>
+                      </tr>
+                      <tr class="row5">
+                        <td><img src="img/imgv/human.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">18+</p>
+                        </td>
+                      </tr>
+                      <tr class="row6">
+                        <td><img src="img/imgv/info.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p>This amazing program will warm the heart of any international volunteer with a love for
+                            working with children and helping those in true need. Volunteers on…</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </div>
+                </div>
+              </table>
+            </div>
+            <a href="#" class="mt-auto b1 btn btn-primary  ">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container py-3">
+    <div class="card ">
+      <div class="row ">
+        <div class="col-md-6" style="background-color: #FAEEEE;">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/imgv/childvietnam.jpg" class="img-fluid imgsize" alt="Responsive image"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 px-4" style="background-color: #FAEEEE;">
+          <div class="card-block px-6">
+            <h4 class="card-title topic">Disabilities & Special Needs</h4>
+            <br>
+            <div class="container">
+              <table class="table table-borderless">
+                <div class="row table-responsive">
+                  <div class="col-2 num-container ">
+                    <tbody>
+                      <tr class="row1">
+                        <td><img src="img/imgv/gps1.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">Cusco, Peru</p>
+                        </td>
+
+                      </tr>
+                      <tr class="row2 ">
+                        <td><img src="img/imgv/time.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">2 weeks</p>
+                        </td>
+                      </tr>
+                      <tr class="row3">
+                        <td><img src="img/imgv/home.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">Host Family</p>
+                        </td>
+                      </tr>
+                      <tr class="row4">
+                        <td><img src="img/imgv/money.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">USD 479 $</p>
+                        </td>
+                      </tr>
+                      <tr class="row5">
+                        <td><img src="img/imgv/human.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">18+</p>
+                        </td>
+                      </tr>
+                      <tr class="row6">
+                        <td><img src="img/imgv/info.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p>Volunteers provide much-needed support and assistance to children and young adults at…</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </div>
+                </div>
+              </table>
+            </div>
+            <a href="#" class="mt-auto b1 btn btn-primary  ">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container py-3">
+    <div class="card ">
+      <div class="row ">
+        <div class="col-md-6" style="background-color: #FAEEEE;">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/imgv/childvietnam.jpg" class="img-fluid imgsize" alt="Responsive image"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 px-4" style="background-color: #FAEEEE;">
+          <div class="card-block px-6">
+            <h4 class="card-title topic">Education Support</h4>
+            <br>
+            <div class="container">
+              <table class="table table-borderless">
+                <div class="row table-responsive">
+                  <div class="col-2 num-container ">
+                    <tbody>
+                      <tr class="row1">
+                        <td><img src="img/imgv/gps1.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">Luang Prabang, Laos</p>
+                        </td>
+
+                      </tr>
+                      <tr class="row2 ">
+                        <td><img src="img/imgv/time.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">1 weeks</p>
+                        </td>
+                      </tr>
+                      <tr class="row3">
+                        <td><img src="img/imgv/home.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">Guest House</p>
+                        </td>
+                      </tr>
+                      <tr class="row4">
+                        <td><img src="img/imgv/money.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">USD 319 $</p>
+                        </td>
+                      </tr>
+                      <tr class="row5">
+                        <td><img src="img/imgv/human.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">18+</p>
+                        </td>
+                      </tr>
+                      <tr class="row6">
+                        <td><img src="img/imgv/info.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p>This exciting project was created with the goal of helping to improve the English-speaking
+                            abilities of the residents…</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </div>
+                </div>
+              </table>
+            </div>
+            <a href="#" class="mt-auto b1 btn btn-primary  ">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container py-3">
+    <div class="card ">
+      <div class="row ">
+        <div class="col-md-6" style="background-color: #FAEEEE;">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/imgv/childvietnam.jpg" class="img-fluid imgsize" alt="Responsive image"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 px-4" style="background-color: #FAEEEE;">
+          <div class="card-block px-6">
+            <h4 class="card-title topic">Childcare & Development</h4>
+            <br>
+            <div class="container">
+              <table class="table table-borderless">
+                <div class="row table-responsive">
+                  <div class="col-2 num-container ">
+                    <tbody>
+                      <tr class="row1">
+                        <td><img src="img/imgv/gps1.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">Ho Chi Minh City, Vietnam</p>
+                        </td>
+
+                      </tr>
+                      <tr class="row2 ">
+                        <td><img src="img/imgv/time.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">2 weeks</p>
+                        </td>
+                      </tr>
+                      <tr class="row3">
+                        <td><img src="img/imgv/home.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">Volunteer House</p>
+                        </td>
+                      </tr>
+                      <tr class="row4">
+                        <td><img src="img/imgv/money.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">USD 739 $</p>
+                        </td>
+                      </tr>
+                      <tr class="row5">
+                        <td><img src="img/imgv/human.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p class="n1">18+</p>
+                        </td>
+                      </tr>
+                      <tr class="row6">
+                        <td><img src="img/imgv/info.png" class="icon1" alt="Responsive image"></td>
+                        <td>
+                          <p>This amazing program will warm the heart of any international volunteer with a love for
+                            working with children and helping those in true need. Volunteers on…</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </div>
+                </div>
+              </table>
+            </div>
+            <a href="#" class="mt-auto b1 btn btn-primary  ">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <a href="#" class="previous round text-center">&#8249;</a>
+  <a href="#" class="next round text-center">&#8250;</a>
+</body>
+
+<!-- Footer -->
+<footer class="text-center text-lg-start text-muted;">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem "></i>About Us
+          </h6>
+          <p>
+            Our website collects places around the world that need help and volunteers can find for places that they
+            want to go , providing opportunities to help those in need and enhance the quality of life in that places.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Blogs
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">United State</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">France</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Thailand</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Vietnam</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem "></i>Customer Relationship
+          </h6>
+          <p>
+            20 RAKAU GROVEES, STOKES VALLEY, WELLINGTON, NEW ZEALAND
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Contact Us
+          </h6>
+          <p><i class="fas fa-home me-3"></i> WELLINGTON, NEW ZEALAND</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            nattinee.nu@gmail.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2021 Copyright:
+    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+
+</html>
