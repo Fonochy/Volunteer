@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-var { Feature } = require("../schema/user");
+var { Feature, Destination } = require("../schema/user");
 
 router.get("/", function (req, res, next) {
   Feature.find().exec((err,doc)=>{
@@ -12,12 +12,12 @@ router.get("/", function (req, res, next) {
 });
 
 router.get('/:id',function (req, res, next){
-  const featureprogram_id = req.params.id
+  const featureprogram_id = parseInt(req.params.id)
     console.log(featureprogram_id)
     Feature.findOne({_id:featureprogram_id}).exec((err,doc)=>{
             res.render('featureprogram',{featureprogram:doc})
     })
-     
+
 })
 
 router.get("/signin", function (req, res, next) {
@@ -40,9 +40,11 @@ router.get("/apply", function (req, res, next) {
 router.get("/howtowork", function (req, res, next) {
   res.render("howtowork");
 });
-router.get("/featuredestination", function (req, res, next) {
-  res.render("featuredestination");
+router.get("/mainprogram", function (req, res, next) {
+  res.render("mainprogram");
 });
+
+
 
 
 router.get("/allprogram", function (req, res, next) {
