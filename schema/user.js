@@ -71,12 +71,17 @@ var userapply = new Schema({
   apply_paymentdate: Date,
   apply_timepayment:  String,
   apply_amountpay:String,
+ 
   
 });
 
 var feature = new Schema({
   discover_program: String,
   place_program: String,
+  name: String,
+  country: String,
+  price: String,
+  image: String,
 })
 
 

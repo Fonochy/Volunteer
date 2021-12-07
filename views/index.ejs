@@ -123,36 +123,54 @@
   <br>
 
   <div class="container">
+    
     <h2>FEATURED PROGRAMS</h2>
-    <div class="card-group">
+    <% Object.values(featureprogram).forEach(function(item){%>
+        <div class="card">
+            <a href="/featureprogram"><img class="card-img-top" src="img/imgv/<%= item.image%>" width="20%" height="20%" alt="" /></a>
+            <div class="card-body">
+                <h4 class="card-title">
+                    <a href="/<%= item._id%>"><%= item.name%></a>
+                </h4>
+                <h5>ราคา <%= item.price%> บาท</h5>
+                <p class="card-text mt-2 mb-5"><%= item.country%></p>
+                <a href="/featureprogram">Click here</a>
+            </div>
+        </div>
+    
+    <!--<div class="card-group">
       <div class="card">
         <img class="card-img-top" src="img/imgv/imgF1.jpg"  height="58%" alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">Marine Conservation</h5>
-          <p class="card-subtiltle float-right">From USD 599</p>
-          <p class="card-text mt-2 mb-5">Costa Rica,<br> Osa Peninsula</p>
+          <h5 class="card-title"><%= item.name%></h5>
+          <p class="card-subtiltle float-right">From <%= item.price%></p>
+          <p class="card-text mt-2 mb-5"> <%= item.country%></p>
           <a href="/featureprogram">Click here</a>
         </div>
       </div>
+      
       <div class="card">
         <img class="card-img-top" src="img/imgv/imgF2.jpg" height="58%"alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">Environmental Conservation</h5>
-          <p class="card-subtiltle float-right">From USD 699</p>
-          <p class="card-text mt-2 mb-5">Philadelphia, USA</p>
+          <h5 class="card-title"><%= item.name%></h5>
+          <p class="card-subtiltle float-right">From <%= item.price%></p>
+          <p class="card-text mt-2 mb-5"><%= item.country%></p>
           <a href="#">Click here</a>
         </div>
       </div>
+      
       <div class="card">
         <img class="card-img-top" src="img/imgv/imgF3.jpg" height="58%"alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">Cloud Forest Environmental Protection</h5>
-          <p class="card-subtiltle float-right">From USD 609</p>
-          <p class="card-text mt-2 mb-5">Pichincha Province, Ecuador</p>
+          <h5 class="card-title"><%= item.name%></h5>
+          <p class="card-subtiltle float-right">From <%= item.price%></p>
+          <p class="card-text mt-2 mb-5"><%= item.country%></p>
           <a href="#">Click here</a>
         </div>
-      </div>
+      </div>-->
+      <% }) %>
     </div>
+    
   </div>
 
   <br>
