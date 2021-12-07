@@ -78,6 +78,10 @@ var userapply = new Schema({
 var feature = new Schema({
   discover_program: String,
   place_program: String,
+  name: String,
+  country: String,
+  price: String,
+  image: String,
 })
 
 
