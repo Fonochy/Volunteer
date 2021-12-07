@@ -1,49 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apply Program</title>
-    <link rel="stylesheet" type="text/css" href="css/stylev.css" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply Program</title>
+  <link rel="stylesheet" type="text/css" href="css/stylev.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
   </script>
-  <nav class="navbar navbar-expand-lg navbar fixed-top navbar-light bg-light">
-    <div class="container">
-        <a class="navbar-brand" href="#">
-            <img src="img/imgv/logo_transparent.png" width="100" height="100" alt="">
-        </a>
-    <div class="collapse navbar-collapse nav justify-content-end navi" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item ">
-          <a class="nav-link" href="/">Home</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About</a>
-             <ul class="dropdown-menu">
-                <li><a href="/aboutus" class="dropdown-item">About Us</a></li>
-                 <li><a href="/contactus" class="dropdown-item">Contact Us</a></li>
-                 <li><a href="/howtowork" class="dropdown-item">How to work</a></li>
-                 <li><a href="/allprogram" class="dropdown-item">All Programs</a></li>
-              </ul>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="/apply">Apply</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/signin">Sign In</a>
-        </li>
-      </ul>
-    </div>
-</div>
-</nav>
+  <%- include ('components/navbar.ejs') %>
 </head>
+
 <body>
-  
+
   <br><br><br><br><br><br>
   <br>
   <div class="container">
@@ -51,49 +24,48 @@
     <h1 class="text-center display-2 fw-bold text-muted">APPLICATION FORM</h1>
     <br>
     <div class="img-apply">
-    <img src="img/imgv/apply.png" width="85%" class="img-fluid text-align-center" alt="Responsive image">
+      <img src="img/imgv/apply.png" width="85%" class="img-fluid text-align-center" alt="Responsive image">
     </div>
   </div>
   <hr>
   <div class="container"></div>
   <div class=" w-50 p-2 text-center text-danger" style="background-color: #F6F0F0;">
-  <h1><img src="img/imgv/code.png" class="img-pro" alt="Responsive image">&nbsp; Program selection</h1>
+    <h1><img src="img/imgv/code.png" class="img-pro" alt="Responsive image">&nbsp; Program selection</h1>
 
-</div>
-<aside>
+  </div>
+  <aside>
     <div class="container">
-       
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
-        <section class="about-cards-section">
-          <div class="container">
-            <div class="row">
-             
-              <div class="col-sm-12 card-wrapper">
-                <h1 class="text-center text-danger ">Reviews</h1>
-                <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
-                  <img class="w-100 h-100" src="img/imgv/v2.jpg" alt="Card image cap">
-                </div>
-                <div class="card-body ">
 
-                  <h4 class="text-uppercase card-title text-center">Carina</h4>
-                  <p class="text-uppercase card-title text-center">Great&nbsp;Britain&nbsp;->&nbsp;Thailand&nbsp;</p>
-                  <p class="card-text">YIt has truly amazed me how much you can contribute to helping a community if you
-                    only have the initiative to start it.
-                  </p>
-                </div>
-    
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+      <section class="about-cards-section">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-sm-12 card-wrapper">
+              <h1 class="text-center text-danger ">Reviews</h1>
+              <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                <img class="w-100 h-100" src="img/imgv/v2.jpg" alt="Card image cap">
+              </div>
+              <div class="card-body ">
+
+                <h4 class="text-uppercase card-title text-center">Carina</h4>
+                <p class="text-uppercase card-title text-center">Great&nbsp;Britain&nbsp;->&nbsp;Thailand&nbsp;</p>
+                <p class="card-text">YIt has truly amazed me how much you can contribute to helping a community if you
+                  only have the initiative to start it.
+                </p>
+              </div>
+
             </div>
           </div>
-        
-        </section>
-    </div>    
-</aside>
-<form class="needs-validation" novalidate method="POST" action="/api/user/add-apply"
-            nctype="multipart/form-data">
-<div class="container">
-   <div class="col-md-6 mb-6">
+
+      </section>
+    </div>
+  </aside>
+  <form class="needs-validation" novalidate method="POST" action="/api/user/add-apply" nctype="multipart/form-data">
+    <div class="container">
+      <div class="col-md-6 mb-6">
         <label for="inputCountry" class="mt-5 h3 text-black">DESTINATIONS:</label>
-        <select class="apply_destination"id="app_destination" name="apply_destination">
+        <select class="apply_destination" id="app_destination" name="apply_destination">
           <option value="Default">CHOOSE DESTINATION</option>
           <option value="Afganistan">Afghanistan</option>
           <option value="American Samoa">American Samoa</option>
@@ -338,69 +310,70 @@
           <option value="Yemen">Yemen</option>
           <option value="Zaire">Zaire</option>
           <option value="Zambia">Zambia</option>
-          <option value="Zimbabwe">Zimbabwe</option>              
+          <option value="Zimbabwe">Zimbabwe</option>
         </select>
+      </div>
     </div>
-</div>
-<div class="container">
-    <div class="col-md-6 mb-6">
-         <label for="inputProgram" class="mt-3 h3 text-black">Program:</label>
-         <select class="apply_program"id="app_program" name="apply_program">
-           <option value="Default">CHOOSE PROGRAM</option>  
-           <option value="Marine Conservation">Marine Conservation</option>
-           <option value="Education Support">Education Support</option>
-           <option value="Social Welfaren">Social Welfare</option>
-         </select>
-    </div>
-        <div class="col-md-6 mb-6">
-            <label for="inputDateapp" class="mt-3 h3 text-black">Start Date</label>
-            <input type="date" class="form-control" id="inputDate_apply" placeholder="DD/MM/YYYY" name="apply_datebirth"
-            required>
-        </div>
-    <div class="col-md-6 mb-6">
+    <div class="container">
+      <div class="col-md-6 mb-6">
+        <label for="inputProgram" class="mt-3 h3 text-black">Program:</label>
+        <select class="apply_program" id="app_program" name="apply_program">
+          <option value="Default">CHOOSE PROGRAM</option>
+          <option value="Marine Conservation">Marine Conservation</option>
+          <option value="Education Support">Education Support</option>
+          <option value="Social Welfaren">Social Welfare</option>
+        </select>
+      </div>
+      <div class="col-md-6 mb-6">
+        <label for="inputDateapp" class="mt-3 h3 text-black">Start Date</label>
+        <input type="date" class="form-control" id="inputDate_apply" placeholder="DD/MM/YYYY" name="apply_datebirth"
+          required>
+      </div>
+      <div class="col-md-6 mb-6">
         <label for="inputDuration" class="mt-3 h3 text-black">Duration:</label>
-        <select class="apply_duration"id="app_duration" name="apply_duration">
-            <option value="default">-Select-</option>    
-            <option value="2week">2week</option>
-            <option value="1month">1month</option>
-            <option value="2month">2month</option>
-        </select> 
-    </div>
-    <div class="col-md-6 mb-6">
-        <label  class="mt-3 h3 text-black">Payment Details:</label><br>
-        <p class="fs-3"><img src="img/imgv/paypal.png" width="25%"  class="img-fluid mt-3" alt="Responsive image">&nbsp; &nbsp; PowerVolunteer@gmail.com</p>
-    </div>
-    <div class="col-md-6 mb-6">
+        <select class="apply_duration" id="app_duration" name="apply_duration">
+          <option value="default">-Select-</option>
+          <option value="2week">2week</option>
+          <option value="1month">1month</option>
+          <option value="2month">2month</option>
+        </select>
+      </div>
+      <div class="col-md-6 mb-6">
+        <label class="mt-3 h3 text-black">Payment Details:</label><br>
+        <p class="fs-3"><img src="img/imgv/paypal.png" width="25%" class="img-fluid mt-3" alt="Responsive image">&nbsp;
+          &nbsp; PowerVolunteer@gmail.com</p>
+      </div>
+      <div class="col-md-6 mb-6">
         <label for="inputPaydate" class="mt-3 h3 text-black">Payment date :</label>
         <input type="date" class="formpaydate" id="input_paymentdate" placeholder="DD/MM/YYYY" name="apply_paymentdate"
           required>
+      </div>
+
+
+      <div class="col-md-6 mb-6">
+        <label for="inputDateapp" class="mt-3 h3 text-black">Time</label>
+        <input type="time" class="form-control" id="inputTime_apply" placeholder="__:__" name="apply_timepayment"
+          required>
+      </div>
+
+      <div class="col-md-6 mb-6">
+        <label for="amountPay" class="mt-3 h3 text-black">Amount:</label>
+        <input type="text" class="form-controlamount" id="input_amountpay" placeholder="" name="apply_amountpay"
+          required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+
+
+      <br><br>
+      <div class="col-md-12 mb-12">
+        <input class="btn btn-primary" type="submit"></input>
+      </div>
+
     </div>
-    
-             
-              <div class="col-md-6 mb-6">
-                <label for="inputDateapp" class="mt-3 h3 text-black">Time</label>
-                <input type="time" class="form-control" id="inputTime_apply" placeholder="__:__" name="apply_timepayment"
-                required>
-            </div>
-              
-              <div class="col-md-6 mb-6">
-                <label for="amountPay" class="mt-3 h3 text-black">Amount:</label>
-                <input type="text" class="form-controlamount" id="input_amountpay" placeholder=""
-                  name="apply_amountpay" required>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
-              </div>
-              
-              
-              <br><br>
-              <div class="col-md-12 mb-12">
-                <input class="btn btn-primary" type="submit"></input>
-              </div>         
-    
-</div>
-</form>
-  
+  </form>
+
 </body>
 
 <!-- Footer -->
@@ -518,4 +491,5 @@
   <!-- Copyright -->
 </footer>
 <!-- Footer -->
+
 </html>
