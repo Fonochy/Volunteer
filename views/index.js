@@ -4,8 +4,13 @@ const router = express.Router();
 var { Feature } = require("../schema/user");
 
 router.get("/", function (req, res, next) {
-  res.render("index");
+  Feature.find().exec((err,doc)=>{
+    res.render('index',{featureprogram:doc})
+      console.log(err);
+    })
+  
 });
+
 
 router.get("/signin", function (req, res, next) {
   res.render("signin");
@@ -32,7 +37,7 @@ router.get("/featuredestination", function (req, res, next) {
 });
 router.get("/featureprogram", function (req, res, next) {
   Feature.find().exec((err,doc)=>{
-    res.render('featureprogram',{featureprogram:doc})
+  res.render('featureprogram',{featureprogram:doc})
     console.log(err);
   })
 });
