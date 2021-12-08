@@ -53,19 +53,18 @@
 
   <br><br><br>
   <!-- Middle image -->
-  <img src="../img/imgv/VolunteerBannerFull.jpg" class="img-fluid text-align-center" alt="Responsive image">
-  <br><br>
+  <% if(program) {%>
+    <img src="../img/imgv/<%= program.img %>" class="img-fluid text-align-center" width="100%" alt="Responsive image">
+    <br><br>
 
-  <div class="container">
-
-    <% if(program) {%>
-    <h2 class="text-left display-2 fw-bold text-des text-danger"></h2>
+    <div class="container">
+    <h2 class="text-left display-4 fw-bold text-des text-danger"><%= program.name %></h2>
     <div class="accordion" id="accordionExample">
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-            aria-expanded="true" aria-controls="collapseOne">
-            <%= program.name %>
+          <button class="accordion-button collapsed text-danger cardbody2" style="background-color: #F6F0F0;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+            aria-expanded="true" aria-controls="collapseOne"><img src="../img/imgv/code.png" class="img-fluid text-align-center icon2" alt="Responsive image">
+            &nbsp;&nbsp;&nbsp;<%= program.name1 %>
             <!-- The Childcare Programs -->
           </button>
         </h2>
@@ -73,147 +72,113 @@
           data-bs-parent="#accordionExample">
           <div class="accordion-body">
             <strong>Open now!!!</strong>
-            <strong>Kenya has reopened to international arrivals and programs in Nairobi have resumed. See the
-              'Additional Info.' section for procedures in place during the pandemic.</strong>
-            <p>The mission of this program is about offering vulnerable children in the community a level of care that
-              they do not receive at home, either because they come from poorer families or they live at the centers</p>
-            <br>
-            <strong>Goals of this projects.</strong>
-            <p>Provide essential childcare to vulnerable children in Nairobi
-              Improve the future prospects of the children in Kenya</p>
+            <br><br>
+            <p>&nbsp;&nbsp;&nbsp;<%= program.infoname %></p>
           </div>
         </div>
       </div>
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingTwo">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          <button class="accordion-button collapsed text-danger cardbody2" style="background-color: #F6F0F0;" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            How you can help?
+            <%= program.help %>
           </button>
         </h2>
         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
           data-bs-parent="#accordionExample">
           <div class="accordion-body">
-            <p>Volunteers play an essential role in helping disadvantaged children through this program.</p>
+            <br>
+            <p>&nbsp;&nbsp;&nbsp;<%= program.infohelp %></p>
           </div>
         </div>
       </div>
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingThree">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          <button class="accordion-button collapsed text-danger cardbody2" style="background-color: #F6F0F0;" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            Requirements
+            <%= program.req %>
           </button>
         </h2>
         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
           data-bs-parent="#accordionExample">
           <div class="accordion-body">
-            <p>Love Volunteers welcomes all those 18 years and over who wish to assist in the ongoing support and
-              development of marginalized and at-risk children of Kenya.</p>
-            <br>
-            <strong>Additionally, volunteers applying to join this program will be required to supply to following
-              documentation:</strong>
-            <p>Emergency contact
-              Passport
-              Police check</p>
+            <p>&nbsp;&nbsp;&nbsp;<%= program.inforeq %></p>
           </div>
         </div>
       </div>
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingFour">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          <button class="accordion-button collapsed text-danger cardbody2" style="background-color: #F6F0F0;" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-            Project Location
+            <%= program.place1 %>
           </button>
         </h2>
         <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
           data-bs-parent="#accordionExample">
           <div class="accordion-body">
-            <p>Situated on the Nairobi River, the city of Nairobi is not only the largest and fastest growing city in
-              Kenya,</p>
+            <p>&nbsp;&nbsp;&nbsp;<%= program.infoplace1 %></p>
             <br>
-            <p>The Nairobi city centre is relatively small at just 1 kilometre square, making it easy to get around on
-              foot.</p>
+            <p>&nbsp;&nbsp;&nbsp;<%= program.infoplace2 %></p>
             <br>
-            <p>The city is filled with many things to do during the day and the night. Visitors can have their pick from
-              numerous safaris</p>
+            <p>&nbsp;&nbsp;&nbsp;<%= program.infoplace3 %></p>
             <br>
-            <p>Nairobi National Park, just outside Nairobi, is home to large herds of Zebra, Wildebeest, Buffalo,</p>
+            <p>&nbsp;&nbsp;&nbsp;<%= program.infoplace4 %></p>
           </div>
         </div>
       </div>
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingFive">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          <button class="accordion-button collapsed text-danger cardbody2" style="background-color: #F6F0F0;" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-            Start Dates & Duration
+            <%= program.time1 %>
           </button>
         </h2>
         <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
           data-bs-parent="#accordionExample">
           <div class="accordion-body">
-            <p>This project is available year-round and programs start every TUESDAY.</p>
-            <br>
-            <p>Spaces on this project are limited and therefore subject to availability. Early booking is recommended.
-            </p>
-            <br>
-            <p>For current available start dates please check the calendar on the right.</p>
+            <p>&nbsp;&nbsp;&nbsp;<%= program.infodate %></p>
           </div>
         </div>
       </div>
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingSix">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          <button class="accordion-button collapsed text-danger cardbody2" style="background-color: #F6F0F0;" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-            Arrival & Orientation
+            <%= program.time2 %>
           </button>
         </h2>
         <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
           data-bs-parent="#accordionExample">
           <div class="accordion-body">
-            <p>Upon arrival into Nairobi volunteers will be collected by a representative of the local project team</p>
-            <br>
-            <p>Program Arrival Day: TUESDAY
-              Program Departure Day: TUESDAY</p>
+            <p>&nbsp;&nbsp;&nbsp;<%= program.infoarrive %></p>
           </div>
         </div>
       </div>
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingSeven">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          <button class="accordion-button collapsed text-danger cardbody2" style="background-color: #F6F0F0;" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-            Accommodation & Meals
+            <%= program.house1 %>
           </button>
         </h2>
         <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
           data-bs-parent="#accordionExample">
           <div class="accordion-body">
-            <p>Volunteers on this program are accommodated within a large and spacious volunteer house,</p>
-            <br>
-            <p>While the accommodation is basic, this is part of the challenge and experience of volunteering in a
-              developing country.</p>
-            <br>
-            <p>The public transport widely used in Nairobi are vans called 'Matatus'</p>
-            <br>
-            <p>Volunteers are provided 2 meals per day (breakfast and dinner) at the volunteer house</p>
+            <p>&nbsp;&nbsp;&nbsp;<%= program.infohouse %></p>
           </div>
         </div>
       </div>
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingEight">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          <button class="accordion-button collapsed text-danger cardbody2" style="background-color: #F6F0F0;" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-            Fees
+            <%= program.price1 %>
           </button>
         </h2>
         <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
           data-bs-parent="#accordionExample">
           <div class="accordion-body">
-            <p>*In addition to the program fees listed above a Registration Fee is payable to secure your place.</p>
-            <br>
-            <p>Some things are not included in the program fees listed above, such as flights,</p>
-            <br>
-            <p>Please note that prices are subject to change without notice.</p>
+            <p>&nbsp;&nbsp;&nbsp;<%= program.infofee %></p>
           </div>
         </div>
       </div>
