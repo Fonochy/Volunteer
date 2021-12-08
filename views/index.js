@@ -19,6 +19,7 @@ router.get("/", async (req, res, next) => {
               featureprogram: program,
               featuredestination: destination,
               review : review,
+              user : validation,
               });
               console.log(err_program, err_destination, err_review);
             });
