@@ -20,14 +20,14 @@ router.get("/", async (req, res, next) => {
 });
 
 router.get("/allprogram", async (req, res, next) => {
-      Program.find()
-        .limit(10)
-        .exec((err_programs, programs) => {
-          res.render("program", {
-            program: programs,
-          });
-          console.log(err_programs);
-        });
+  Program.find()
+    .limit(10)
+    .exec((err_programs, programs) => {
+      res.render("program", {
+        program: programs,
+      });
+      console.log(err_programs);
+    });
 });
 
 router.get("/featureprogram/:id", function (req, res, next) {
@@ -48,12 +48,12 @@ router.get("/featuredestination/:id", function (req, res, next) {
   });
 });
 
-router.get("/program/:id", function (req, res, next) {
+router.get("/mainprogram/:id", function (req, res, next) {
   const program_id = req.params.id;
   console.log(program_id);
   Program.findOne({ _id: program_id }).exec((err, doc) => {
     console.log(doc);
-    res.render("program", { program: doc });
+    res.render("mainprogram", { program: doc });
   });
 });
 
@@ -68,17 +68,17 @@ router.get("/signup", function (req, res, next) {
 router.get("/aboutus", function (req, res, next) {
   res.render("aboutus");
 });
+
 router.get("/contactus", function (req, res, next) {
   res.render("contactus");
 });
+
 router.get("/apply", function (req, res, next) {
   res.render("apply");
 });
+
 router.get("/howtowork", function (req, res, next) {
   res.render("howtowork");
-});
-router.get("/mainprogram", function (req, res, next) {
-  res.render("mainprogram");
 });
 
 router.get("/allprogram", function (req, res, next) {

@@ -50,7 +50,6 @@ var myuser = new Schema({
   phone: String,
   user_gender: String,
   user_volunteer: String,
-  
 });
 
 var mycontact = new Schema({
@@ -60,19 +59,15 @@ var mycontact = new Schema({
     required: true,
   },
   user_message: String,
-  
 });
 var userapply = new Schema({
-  
   apply_destination: String,
   apply_program: String,
   apply_datebirth: Date,
   apply_duration: String,
   apply_paymentdate: Date,
-  apply_timepayment:  String,
-  apply_amountpay:String,
- 
-  
+  apply_timepayment: String,
+  apply_amountpay: String,
 });
 
 var feature = new Schema({
@@ -86,32 +81,32 @@ var feature = new Schema({
   detail: String,
   topic: String,
   topic2: String,
-})
+});
 
 var destination = new Schema({
-  country : String,
-  image : String,
-  info : String,
-  topic1 : String,
+  country: String,
+  image: String,
+  info: String,
+  topic1: String,
   info1: String,
-  topic2 : String,
-  info2 : String,
-  topic3 : String,
+  topic2: String,
+  info2: String,
+  topic3: String,
   info3: String,
-  image1 : String,
-  image2 : String,
-})
+  image1: String,
+  image2: String,
+});
 
 var program = new Schema({
-  age : String,
-  house : String,
+  age: String,
+  house: String,
   money: String,
   name: String,
   pinfo: String,
   place: String,
   time: String,
-})
-
+  img: String,
+});
 
 // สร้างและส่งออกโมเดล
 exports.Users = mongoose.model("users", myuser);
