@@ -92,6 +92,24 @@ var destination = new Schema({
   country : String,
   image : String,
   info : String,
+  topic1 : String,
+  info1: String,
+  topic2 : String,
+  info2 : String,
+  topic3 : String,
+  info3: String,
+  image1 : String,
+  image2 : String,
+})
+
+var program = new Schema({
+  age : String,
+  house : String,
+  money: String,
+  name: String,
+  pinfo: String,
+  place: String,
+  time: String,
 })
 
 
@@ -101,6 +119,7 @@ exports.Contact = mongoose.model("contactus", mycontact);
 exports.Apply = mongoose.model("applyuser", userapply);
 exports.Feature = mongoose.model("featureprogram", feature);
 exports.Destination = mongoose.model("featuredestination", destination);
+exports.Program = mongoose.model("program", program);
 
 //ออกแบบฟังก์ชั่นสำหรับบันทึกข้อมูล
 exports.saveProduct = function (model, data) {

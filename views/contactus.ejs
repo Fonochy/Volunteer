@@ -73,13 +73,13 @@
   <br><br><br><br><br><br><br>
   <div class="container">
     <!-- Middle image -->
-    <h1 class="text-center display-3 fw-bold text-muted ">CONTACT US</h1>
+    <h1 class="text-center display-3 fw-bold text-danger text-des">CONTACT US</h1>
+  </div>
     <br>
-    <div class="bg-contact">
-      <img src="img/imgv/contactus.jpg" width="85%" class="img-fluid text-align-center" alt="Responsive image">
-    </div>
+    <img src="img/imgv/contactus.jpg" width="100%" class="img-fluid text-align-center" alt="Responsive image">
     <br><br>
-    <h5 class="text-center  mb-2">"Power Volunteers is based in USA. Our office hours are 8am to 5pm, Monday to Friday."
+  <div class="container">
+    <h5 class="text-center  mb-2 cardtitle">"Power Volunteers is based in USA. Our office hours are 8am to 5pm, Monday to Friday."
     </h5>
     <br><br>
     <aside>
@@ -87,48 +87,45 @@
       <section class="about-cards-section">
         <div class="container">
           <div class="row">
-
-            <div class="col-sm-12 col-sm-12 card-wrapper ">
-              <h1 class="text-center text-danger ">Reviews</h1>
+            <div class="col-sm-12 card-wrapper ">
+              <h1 class="text-center text-danger text-des text-des">Reviews</h1>
               <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
-                <img class="w-100 h-100" src="img/imgv/v2.jpg" alt="Card image cap">
+                <img class="w-100 h-100" src="../img/imgv/v2.jpg" alt="Card image cap">
               </div>
               <div class="card-body ">
 
-                <h4 class="text-uppercase card-title text-center">Carina</h4>
-                <p class="text-uppercase card-title text-center">Great&nbsp;Britain&nbsp;->&nbsp;Thailand&nbsp;</p>
-                <p class="card-text">YIt has truly amazed me how much you can contribute to helping a community if you
+                <h4 class="text-uppercase card-title text-center cardtitle text-danger">Carina</h4>
+                <p class="text-uppercase card-title text-center cardbody">Great&nbsp;Britain&nbsp;->&nbsp;Thailand&nbsp;</p>
+                <p class="card-text text-center cardbody">YIt has truly amazed me how much you can contribute to helping a community if you
                   only have the initiative to start it.
                 </p>
               </div>
-
             </div>
           </div>
-
       </section>
-
     </aside>
-    <h1 class="text-left  mb-2 mt-5 ">Email Us</h1>
-    <p class="text-left  mb-2 mt-5">The best way to reach us is by email.
+    
+    <b><h1 class="text-left mb-2 mt-5 text-des">Email Us</h1></b>
+    <p class="text-left mb-2 mt-5 cardtitle">The best way to reach us is by email.
       Message us and we'll be happy to help :)</p>
     <br><br>
 
     <form class="needs-validation" novalidate method="POST" action="/api/user/add-contact" nctype="multipart/form-data">
       <div class="form-row">
 
-        <div class="col-md-5 mb-5 ">
+        <div class="col-md-5 mb-5 cardbody">
           <label for="validationCustom01">Name-Surname</label>
           <input type="text" class="form-control" id="validationCustom01" placeholder="Name" name="user_namecontact"
             required>
         </div>
 
-        <div class="col-md-5 mb-5">
+        <div class="col-md-5 mb-5 cardbody">
           <label for="inputEmail4">Email</label>
           <input type="email" class="form-control" id="inputEmail4" placeholder="Email" name="user_emailcontact"
             required>
         </div>
 
-        <div class="col-md-10 mb-10">
+        <div class="col-md-10 mb-10 cardbody">
           <div class="form-group">
             <label for="exampleFormControlTextarea1">Messages</label>
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="7" name="user_message"
@@ -138,7 +135,7 @@
         </div>
         <br><br>
         <div class="col-md-12 mb-12">
-          <input class="btn btn-primary" type="submit"></input>
+          <input class="btn btn-primary cardbody" type="submit"></input>
         </div>
 
 
@@ -149,7 +146,7 @@
 
 </body>
 <!-- Footer -->
-<footer class="text-center text-lg-start text-muted;">
+<footer class="text-center text-lg-start text-muted cardbody">
   <!-- Section: Social media -->
   <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
     <!-- Left -->
