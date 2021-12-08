@@ -25,9 +25,9 @@ router.post("/add-users-api", function (req, res, next) {
 });
 
 // add Apply
-router.post("/add-apply",(req, res) => {
+router.post("/add-apply", (req, res) => {
   const apply = req.body;
-  
+
   var data = Apply(apply);
   data.save(function (err) {
     if (err) {
@@ -41,7 +41,7 @@ router.post("/add-apply",(req, res) => {
 });
 
 // add Contact
-router.post("/add-contact",(req, res) => {
+router.post("/add-contact", (req, res) => {
   const contact = req.body;
   var data = Contact(contact);
   data.save(function (err) {
@@ -55,6 +55,32 @@ router.post("/add-contact",(req, res) => {
   });
 });
 
+// Sign in
+router.post("/signin", (req, res) => {
+  var email = req.body.email;
+  var password = req.body.password;
 
+  if (email && password) {
+    // console.log(email);
+    Users.findOne({ user_email: email, user_password: password }).exec(
+      (err, results) => {
+        console.log(results);
+        if (results) {
+          req.session.loggedin = true;
+          req.session.user = results;
+          // response.redirect("/home");
+          res.redirect("/");
+        } else {
+          res.redirect("/signin");
+        }
+      }
+    );
+  } else {
+    res.redirect("/signin");
+  }
+});
+
+// Sign out
+router;
 
 module.exports = router;
