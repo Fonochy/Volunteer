@@ -86,6 +86,8 @@ var feature = new Schema({
   detail: String,
   topic: String,
   topic2: String,
+  detailimage: String,
+  requirement: String,
 })
 
 var destination = new Schema({

@@ -1,11 +1,11 @@
 const express = require("express");
 const router = express.Router();
 
-var { Feature, Destination } = require("../schema/user");
+var { Feature, Destination, Users } = require("../schema/user");
 
 router.get("/", async (req, res, next) => {
   Feature.find()
-    .limit(3)
+    .limit(4)
     .exec((err_program, program) => {
       Destination.find()
         .limit(3)
@@ -40,6 +40,18 @@ router.get("/featuredestination/:id", function (req, res, next) {
 router.get("/signin", function (req, res, next) {
   res.render("signin");
 });
+
+// router.post("/signin2", (req,res) =>{
+//     const email = req.body.email;
+//    const password = req.body.password;
+//    const useremail = Users.findOne({email:email});
+//    console.log(Users)
+//    if(useremail.password == password){
+//      res.render("/");
+//    }else{
+//      res.render('404')
+//  }
+// })
 
 router.get("/signup", function (req, res, next) {
   res.render("signup");
