@@ -50,6 +50,7 @@ var myuser = new Schema({
   phone: String,
   user_gender: String,
   user_volunteer: String,
+  user_about: String,
 });
 
 var mycontact = new Schema({
@@ -108,14 +109,14 @@ var program = new Schema({
   place: String,
   time: String,
   img: String,
-  help:String,
-  house1:String,
-  name1:String,
-  place1:String,
-  price1:String,
-  req:String,
-  time1 : String,
-  time2 :String,
+  help: String,
+  house1: String,
+  name1: String,
+  place1: String,
+  price1: String,
+  req: String,
+  time1: String,
+  time2: String,
   infoname: String,
   infohelp: String,
   infoplace1: String,
@@ -125,16 +126,16 @@ var program = new Schema({
   inforeq: String,
   infoarrive: String,
   infofee: String,
-  infohouse : String,
-  infodate : String,
+  infohouse: String,
+  infodate: String,
 });
 
 var review = new Schema({
-  topicEx : String,
-  experience : String,
-  topIm : String,
-  impression : String,
-})
+  topicEx: String,
+  experience: String,
+  topIm: String,
+  impression: String,
+});
 
 // สร้างและส่งออกโมเดล
 exports.Users = mongoose.model("users", myuser);

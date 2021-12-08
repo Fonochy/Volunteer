@@ -15,6 +15,15 @@ var usersRouter = require("./router/routes");
 var app = express();
 app.use(cors());
 
+// create session object
+app.use(
+  session({
+    secret: "secretVolunteer",
+    resave: true,
+    saveUninitialized: true,
+  })
+);
+
 // view engine setup
 https: app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
