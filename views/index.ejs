@@ -41,8 +41,7 @@
           </li>
           <li class="nav-item">
             <% if(user) {%>
-            <div><%= `${user.user_firstname} ${user.user_lastname}` %></div>
-            <a class="nav-link" href="/signout">Sign Out</a>
+            <a class="nav-link" href="/signout"><%= `${user.user_firstname} ${user.user_lastname}` %></a>
             <% } else {%>
             <a class="nav-link" href="/signin">Sign In</a>
             <% } %>

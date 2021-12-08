@@ -1,4 +1,5 @@
 var express = require("express");
+const bcrypt = require("bcryptjs");
 var router = express.Router();
 
 var { Users, Contact, Apply } = require("../../schema/user");
@@ -10,6 +11,7 @@ router.post("/add-users-api", function (req, res, next) {
   const user = {
     ...req.body, //copy old json
     phone: `+${req.body.inputTel}${req.body.phone}`,
+    user_password: bcrypt.hashSync(req.body.user_password, 8),
   };
   var data = Users(user);
   //var data = UsersModel(req.body);
@@ -18,6 +20,8 @@ router.post("/add-users-api", function (req, res, next) {
       res.redirect("/signup");
       Response.errorResponse(err, res);
     } else {
+      req.session.loggedin = true;
+      req.session.user = user;
       res.redirect("/");
       // Response.successResponse("User Added!", res, {});
     }
@@ -62,10 +66,9 @@ router.post("/signin", (req, res) => {
 
   if (email && password) {
     // console.log(email);
-    Users.findOne({ user_email: email, user_password: password }).exec(
-      (err, results) => {
-        console.log(results);
-        if (results) {
+    Users.findOne({ user_email: email }).exec((err, results) => {
+      if (results) {
+        if (bcrypt.compareSync(password, results.user_password)) {
           req.session.loggedin = true;
           req.session.user = results;
           // response.redirect("/home");
@@ -73,8 +76,10 @@ router.post("/signin", (req, res) => {
         } else {
           res.redirect("/signin");
         }
+      } else {
+        res.redirect("/signin");
       }
-    );
+    });
   } else {
     res.redirect("/signin");
   }
