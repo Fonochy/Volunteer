@@ -14,7 +14,7 @@
   </script>
   <nav class="navbar navbar-expand-lg navbar fixed-top navbar-light bg-light">
     <div class="container">
-        <a class="navbar-brand" href="#"><img src="img/imgv/logo_transparent.png" width="100" height="100"
+        <a class="navbar-brand" href="#"><img src="../img/imgv/logo_transparent.png" width="100" height="100"
                 alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,29 +50,28 @@
 <body>
   <br><br><br><br><br><br>
   <!-- Middle image -->
-  <img src="../img/imgv/kenya2.jpg" class="img-fluid text-align-center" width="100%" alt="Responsive image">
+  <img src="../img/imgv/<%= featuredestination.image1%>" class="img-fluid text-align-center" width="100%" alt="Responsive image">
   <% if(featuredestination) {%>
   <div class="container">
     <br><br><br>
-    <h1 class="text-left display-3 fw-bold text-muted "><%= featureprogram.country%></h1>
-    <h4 class="text-left  mb-2">Land of nature.</h4>
+    <h1 class="text-left display-3 fw-bold text-muted topicC "><%= featuredestination.country%></h1>
+    <h4 class="text-left mb-2 cardtitle"><%= featuredestination.info%></h4>
 
     <aside>
       <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
       <section class="about-cards-section">
         <div class="container">
           <div class="row">
-
-            <div class="col-sm-12 col-sm-12 card-wrapper ">
-              <h1 class="text-center text-danger ">Reviews</h1>
+            <div class="col-sm-12 card-wrapper ">
+              <h1 class="text-center text-danger text-des ">Reviews</h1>
               <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
                 <img class="w-100 h-100" src="../img/imgv/v2.jpg" alt="Card image cap">
               </div>
               <div class="card-body ">
 
-                <h4 class="text-uppercase card-title text-center">Carina</h4>
-                <p class="text-uppercase card-title text-center">Great&nbsp;Britain&nbsp;->&nbsp;Thailand&nbsp;</p>
-                <p class="card-text">YIt has truly amazed me how much you can contribute to helping a community if you
+                <h4 class="text-uppercase card-title text-center cardtitle">Carina</h4>
+                <p class="text-uppercase card-title text-center cardbody">Great&nbsp;Britain&nbsp;->&nbsp;Thailand&nbsp;</p>
+                <p class="card-text text-center cardbody">YIt has truly amazed me how much you can contribute to helping a community if you
                   only have the initiative to start it.
                 </p>
               </div>
@@ -83,25 +82,22 @@
     <br>
     <div class="col-sm-6 square" style="background-color: #F6F0F0;">
       <br>
-      <h1 class="text-left text-des text-danger">Discover Kenya!!!</h1>
-      <p class="text-left text1-des">&nbsp;&nbsp;&nbsp;&nbsp;kenya.</p>
-      <br><br><br><br><br><br>
+      <h1 class="text-left text-des text-danger"><%= featuredestination.topic1%></h1>
+      <p class="text-left text1-des">&nbsp;&nbsp;&nbsp;&nbsp;<%= featuredestination.info1%></p>
+      <br><br>
       <hr>
-      <h1 class="text-left text-des text-danger">Nature all over you</h1>
-      <p class="text-left text1-des">&nbsp;&nbsp;&nbsp;&nbsp;Kenya is home to the big game. The Big Five are the Lion,
-        the Elephant, the Leopard, the Buffalo, and the Rhino.</p>
+      <h1 class="text-left text-des text-danger"><%= featuredestination.topic2%></h1>
+      <p class="text-left text1-des">&nbsp;&nbsp;&nbsp;&nbsp;<%= featuredestination.info2%></p>
     </div>
     <br>
     <b>
-      <h1 class="text-left text-des text-danger">Nature all over you</h1>
+      <h1 class="text-left text-des text-danger"><%= featuredestination.topic3%></h1>
     </b>
     <br>
-    <img src="../img/imgv/kenya3.jpg" class="img-fluid text-align-center" alt="Responsive image">
+    <img src="../img/imgv/<%= featuredestination.image2%>" class="img-fluid text-align-center" width="100%" alt="Responsive image">
     <br><br>
-    <p class="text-left text1-des">&nbsp;&nbsp;&nbsp;&nbsp;Kenya is home to the big game. The Big Five are the Lion, the
-      Elephant, the Leopard, the Buffalo, and the Rhino.</p>
+    <p class="text-left text1-des">&nbsp;&nbsp;&nbsp;&nbsp;<%= featuredestination.info3%></p>
   </div>
-
 
   </div>
   <% } %>

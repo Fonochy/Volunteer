@@ -343,9 +343,13 @@ aside {
   width: 40px;
   height: 40px;
   margin-top: 1%;
-  
 }
 
+.icon2{
+  width: 30px;
+  height: 30px;
+
+}
 .n1 {
   margin-top: 20px;
   font-size: 18px;
@@ -430,7 +434,25 @@ a:hover {
   font-family: Poppins;
 }
 
+.cardbody1{
+  font-size: 15px;
+  font-weight: 1000;
+  font-family: Poppins;
+}
+
+.cardbody2{
+  font-size: 40px;
+  font-weight: 1000;
+  font-family: Poppins;
+}
+
+
 .imgsize1{
   width: 5%;
   height: 20%;
+}
+
+.topicC{
+  font-size: 30px;
+  font-family: Poppins;
 }
