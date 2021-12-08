@@ -1,14 +1,14 @@
 const express = require("express");
 const router = express.Router();
 
-var { Feature, Destination, Users } = require("../schema/user");
+var { Feature, Destination, Program, Users } = require("../schema/user");
 
 router.get("/", async (req, res, next) => {
   Feature.find()
     .limit(4)
     .exec((err_program, program) => {
       Destination.find()
-        .limit(3)
+        .limit(4)
         .exec((err_destination, destination) => {
           res.render("index", {
             featureprogram: program,
@@ -16,6 +16,17 @@ router.get("/", async (req, res, next) => {
           });
           console.log(err_program, err_destination);
         });
+    });
+});
+
+router.get("/allprogram", async (req, res, next) => {
+  Program.find()
+    .limit(10)
+    .exec((err_programs, programs) => {
+      res.render("program", {
+        program: programs,
+      });
+      console.log(err_programs);
     });
 });
 
@@ -34,6 +45,15 @@ router.get("/featuredestination/:id", function (req, res, next) {
   Destination.findOne({ _id: featuredestination_id }).exec((err, doc) => {
     console.log(doc);
     res.render("featuredestination", { featuredestination: doc });
+  });
+});
+
+router.get("/mainprogram/:id", function (req, res, next) {
+  const program_id = req.params.id;
+  console.log(program_id);
+  Program.findOne({ _id: program_id }).exec((err, doc) => {
+    console.log(doc);
+    res.render("mainprogram", { program: doc });
   });
 });
 
@@ -60,17 +80,17 @@ router.get("/signup", function (req, res, next) {
 router.get("/aboutus", function (req, res, next) {
   res.render("aboutus");
 });
+
 router.get("/contactus", function (req, res, next) {
   res.render("contactus");
 });
+
 router.get("/apply", function (req, res, next) {
   res.render("apply");
 });
+
 router.get("/howtowork", function (req, res, next) {
   res.render("howtowork");
-});
-router.get("/mainprogram", function (req, res, next) {
-  res.render("mainprogram");
 });
 
 router.get("/allprogram", function (req, res, next) {

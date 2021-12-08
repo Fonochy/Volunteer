@@ -50,7 +50,6 @@ var myuser = new Schema({
   phone: String,
   user_gender: String,
   user_volunteer: String,
-  
 });
 
 var mycontact = new Schema({
@@ -60,19 +59,15 @@ var mycontact = new Schema({
     required: true,
   },
   user_message: String,
-  
 });
 var userapply = new Schema({
-  
   apply_destination: String,
   apply_program: String,
   apply_datebirth: Date,
   apply_duration: String,
   apply_paymentdate: Date,
-  apply_timepayment:  String,
-  apply_amountpay:String,
- 
-  
+  apply_timepayment: String,
+  apply_amountpay: String,
 });
 
 var feature = new Schema({
@@ -88,14 +83,51 @@ var feature = new Schema({
   topic2: String,
   detailimage: String,
   requirement: String,
-})
+});
 
 var destination = new Schema({
-  country : String,
-  image : String,
-  info : String,
-})
+  country: String,
+  image: String,
+  info: String,
+  topic1: String,
+  info1: String,
+  topic2: String,
+  info2: String,
+  topic3: String,
+  info3: String,
+  image1: String,
+  image2: String,
+});
 
+var program = new Schema({
+  age: String,
+  house: String,
+  price: String,
+  name: String,
+  pinfo: String,
+  place: String,
+  time: String,
+  img: String,
+  help:String,
+  house1:String,
+  name1:String,
+  place1:String,
+  price1:String,
+  req:String,
+  time1 : String,
+  time2 :String,
+  infoname: String,
+  infohelp: String,
+  infoplace1: String,
+  infoplace2: String,
+  infoplace3: String,
+  infoplace4: String,
+  inforeq: String,
+  infoarrive: String,
+  infofee: String,
+  infohouse : String,
+  infodate : String,
+});
 
 // สร้างและส่งออกโมเดล
 exports.Users = mongoose.model("users", myuser);
@@ -103,6 +135,7 @@ exports.Contact = mongoose.model("contactus", mycontact);
 exports.Apply = mongoose.model("applyuser", userapply);
 exports.Feature = mongoose.model("featureprogram", feature);
 exports.Destination = mongoose.model("featuredestination", destination);
+exports.Program = mongoose.model("program", program);
 
 //ออกแบบฟังก์ชั่นสำหรับบันทึกข้อมูล
 exports.saveProduct = function (model, data) {
