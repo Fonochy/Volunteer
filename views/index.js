@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-var { Feature, Destination, Program, Users } = require("../schema/user");
+var { Feature, Destination, Program, Users, Review } = require("../schema/user");
 
 router.get("/", async (req, res, next) => {
   var validation = req.session.user;
@@ -12,11 +12,16 @@ router.get("/", async (req, res, next) => {
       Destination.find()
         .limit(4)
         .exec((err_destination, destination) => {
-          res.render("index", {
-            featureprogram: program,
-            featuredestination: destination,
-            user: validation,
-          });
+          Review.find()
+            .limit(3)
+            .exec((err_review, review) => {
+              res.render("index", {
+              featureprogram: program,
+              featuredestination: destination,
+              review : review,
+              });
+              console.log(err_program, err_destination, err_review);
+            });
         });
     });
 });
@@ -64,6 +69,7 @@ router.get("/mainprogram/:id", function (req, res, next) {
 });
 
 router.get("/review/:id", function (req, res, next) {
+
   var validation = req.session.user;
   Review.find()
     .limit(10)
@@ -74,6 +80,8 @@ router.get("/review/:id", function (req, res, next) {
       console.log(err_reviews);
     });
 });
+  
+
 
 router.get("/signin", function (req, res, next) {
   var validation = req.session.user;
@@ -109,10 +117,7 @@ router.get("/allprogram", function (req, res, next) {
   var validation = req.session.user;
   res.render("program");
 });
-router.get("/review", function (req, res, next) {
-  var validation = req.session.user;
-  res.render("review");
-});
+
 
 router.get("/signout", function (req, res, next) {
   var validation = req.session.user;
