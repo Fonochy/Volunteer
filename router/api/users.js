@@ -1,4 +1,5 @@
 var express = require("express");
+const bcrypt = require("bcryptjs");
 var router = express.Router();
 
 var { Users, Contact, Apply } = require("../../schema/user");
@@ -10,6 +11,7 @@ router.post("/add-users-api", function (req, res, next) {
   const user = {
     ...req.body, //copy old json
     phone: `+${req.body.inputTel}${req.body.phone}`,
+    user_password: bcrypt.hashSync(req.body.user_password, 8),
   };
   var data = Users(user);
   //var data = UsersModel(req.body);
@@ -18,6 +20,8 @@ router.post("/add-users-api", function (req, res, next) {
       res.redirect("/signup");
       Response.errorResponse(err, res);
     } else {
+      req.session.loggedin = true;
+      req.session.user = user;
       res.redirect("/");
       // Response.successResponse("User Added!", res, {});
     }
@@ -25,9 +29,9 @@ router.post("/add-users-api", function (req, res, next) {
 });
 
 // add Apply
-router.post("/add-apply",(req, res) => {
+router.post("/add-apply", (req, res) => {
   const apply = req.body;
-  
+
   var data = Apply(apply);
   data.save(function (err) {
     if (err) {
@@ -41,7 +45,7 @@ router.post("/add-apply",(req, res) => {
 });
 
 // add Contact
-router.post("/add-contact",(req, res) => {
+router.post("/add-contact", (req, res) => {
   const contact = req.body;
   var data = Contact(contact);
   data.save(function (err) {
@@ -55,6 +59,33 @@ router.post("/add-contact",(req, res) => {
   });
 });
 
+// Sign in
+router.post("/signin", (req, res) => {
+  var email = req.body.email;
+  var password = req.body.password;
 
+  if (email && password) {
+    // console.log(email);
+    Users.findOne({ user_email: email }).exec((err, results) => {
+      if (results) {
+        if (bcrypt.compareSync(password, results.user_password)) {
+          req.session.loggedin = true;
+          req.session.user = results;
+          // response.redirect("/home");
+          res.redirect("/");
+        } else {
+          res.redirect("/signin");
+        }
+      } else {
+        res.redirect("/signin");
+      }
+    });
+  } else {
+    res.redirect("/signin");
+  }
+});
+
+// Sign out
+router;
 
 module.exports = router;
