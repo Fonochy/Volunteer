@@ -131,11 +131,14 @@ var program = new Schema({
 });
 
 var review = new Schema({
-  topicEx: String,
-  experience: String,
-  topIm: String,
-  impression: String,
-});
+  topicEx : String,
+  experience : String,
+  topIm : String,
+  impression : String,
+  overall : String,
+  imgreview :String,
+})
+
 
 // สร้างและส่งออกโมเดล
 exports.Users = mongoose.model("users", myuser);

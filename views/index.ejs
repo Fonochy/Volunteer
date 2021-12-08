@@ -57,15 +57,13 @@
 
 
   <br><br><br><br><br><br>
-  <div class="container">
-    <!-- Middle image -->
-    <img src="img/imgv/VolunteerBannerFull.jpg" class="img-fluid text-align-center" alt="Responsive image">
-  </div>
+    <img src="img/imgv/VolunteerBannerFull.jpg" class="img-fluid text-align-center" width="100%" alt="Responsive image">
+
   <hr>
 
   <div class="container py-3">
     <div class="card">
-      <div class="row ">
+      <div class="row" style="background-color: #FAEEEE;">
         <div class="col-md-7 px-4">
           <div class="card-block px-6">
             <h4 class="card-title cardtitle text-danger">“Happy & Experiences come together”</h4>
@@ -76,7 +74,7 @@
             </p>
             <p class="card-text cardbody">Matthew Stanford (Volunteer in 2018)</p>
             <br>
-            <a href="#" class="mt-auto btn btn-primary  ">Read More</a>
+            <a href="#" class="mt-auto btn btn-danger">Read More</a>
           </div>
         </div>
 
@@ -96,9 +94,9 @@
 
   <div class="container">
     <h2 class="text-des">FEATURED DESTINATION</h2>
-    <div class="card-group ">
+    <div class="card-group">
       <% Object.values(featuredestination).forEach(function(item){%>
-      <div class="card">
+      <div class="card" style="background-color: #FAEEEE;">
         <img class="card-img-top" src="img/imgv/<%= item.image%>" alt="Card image cap">
         <div class="card-body">
           <b>
@@ -118,7 +116,7 @@
     <h2 class="text-des">FEATURED PROGRAMS</h2>
     <div class="card-group ">
       <% Object.values(featureprogram).forEach(function(item){%>
-      <div class="card">
+      <div class="card" style="background-color: #FAEEEE;">
         <img class="card-img-top" src="img/imgv/<%= item.image%>" alt="Card image cap">
         <div class="card-body">
           <b>
@@ -138,29 +136,29 @@
   <br>
 
   <div class="container">
+   <% Object.values(review).forEach(function(item){%>
     <h2 class="text-des">Reviews</h2> <br>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
     <section class="about-cards-section">
       <div class="container">
         <div class="row">
           <div class="col-sm-4 card-wrapper">
-
             <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
               <img class="w-100 h-100" src="img/imgv/v2.jpg" alt="Card image cap">
             </div>
-            <div class="card-body text-center mt-4">
+              <div class="card-body text-center mt-4">
               <h4 class="text-uppercase card-title cardtitle text-danger">Carina</h4>
               <p class="text-uppercase card-title cardbody">Great Brtain -> Thailand</p>
               <p class="card-text cardbody">YIt has truly amazed me how much you can contribute to helping a community
                 if you
                 only have the initiative to start it.
               </p>
-            </div>
-
+              <a href="/review/<%= item._id%>" class="mt-auto btn btn-danger cardbody">Read More</a>
+              </div>
+            
           </div>
 
           <div class="col-sm-4 card-wrapper">
-
             <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
               <img class="w-100 h-100" src="img/imgv/v3.jpg" alt="Card image cap">
             </div>
@@ -171,12 +169,11 @@
                 what a
                 smile means for real!
               </p>
+              <a href="/review/<%= item._id%>" class="mt-auto btn btn-danger cardbody">Read More</a>
             </div>
-
           </div>
 
           <div class="col-sm-4 card-wrapper">
-
             <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
               <img class="w-100 h-100" src="img/imgv/v4.jpg" alt="Card image cap">
             </div>
@@ -187,26 +184,20 @@
                 me how
                 to do flips on the trampoline, how to dance the Azonto and how to prepare Ghanian food.
               </p>
+              <a href="/review/<%= item._id%>" class="mt-auto btn btn-danger cardbody">Read More</a>
             </div>
-
           </div>
 
         </div>
       </div>
-
-
-
     </section>
-
-
-
+    <% }) %>
   </div>
-
 </body>
 
 <!-- Footer -->
 
-<footer class="text-center text-lg-start text-muted; cardbody">
+<footer class="text-center text-lg-start text-muted cardbody" style="background-color: #FAEEEE;">
   <!-- Section: Social media -->
   <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
     <!-- Left -->
