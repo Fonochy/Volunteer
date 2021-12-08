@@ -100,7 +100,7 @@ var destination = new Schema({
 var program = new Schema({
   age: String,
   house: String,
-  money: String,
+  price: String,
   name: String,
   pinfo: String,
   place: String,
