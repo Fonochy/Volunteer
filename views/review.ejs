@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Review</title>
-        <link rel="stylesheet" type="text/css" href="css/stylev.css" />
+        <link rel="stylesheet" type="text/css" href="../css/stylev.css" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
@@ -53,32 +53,50 @@
         <br><br><br><br><br><br>
         <!-- Middle image -->
         <img src="../img/imgv/v8.jpg" class="img-fluid text-align-center" width="100%" alt="Responsive image">
+        <% if(review){%>
+        <aside>
+          <br><br><br>
+          <section class="about-cards-section">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-12 card-wrapper">
+                  <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                   <img class="w-100 h-100" src="img/imgv/<%= review.imgperson%>" alt="Card image cap">
+                  </div>
+                    <div class="card-body text-center mt-4">
+                      <h4 class="text-uppercase card-title cardtitle text-danger"><%= review.namereview %></h4>
+                      <p class="text-uppercase card-title cardbody"><%= review.countryreview %></p>
+                      <p class="card-text cardbody"><%= review.shortreview %></p>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </aside>
        
       <div class="container">
-        <% if(review){%>
+        
           <br><br><br>
-          <h1 class="text-left display-3 fw-bold text-danger topicC "><%= review.topicEx %></h1>
+          <h1 class="text-left display-3 fw-bold text-danger topicC"><%= review.topicEx %></h1>
           <h4 class="text-left mb-2 cardtitle"></h4>
           <br>
           <div class="col-sm-6 square" style="background-color: #F6F0F0;">
+            <br><br>
+            <h1 class="text-left text-danger text-des"><%= review.topicEx %></h1>
             <br>
-            <h1 class="text-left text-des text-danger">Our Experiences !</h1>
-            <p class="text-left text1-des">The project of teaching at centre was very well run.</p>
-            <br><br>
+            <p class="text-left cardbody">&emsp;&emsp;<%= review.experience %></p>
+            <br>
             <hr>
-            <h1 class="text-left text-des text-danger">Impression !</h1>
-            <p class="text-left text1-des">It’s really surprise that I teached the students, who are very kind!!!! </p>
-            <br><br>
+            <h1 class="text-left text-danger text-des"><%= review.topIm %></h1>
+            <br>
+            <p class="text-left cardbody">&emsp;&emsp;<%= review.impression %></p>
+            <br>
             <hr>
-            <h1 class="text-left text-des text-danger">Overall</h1>
-            <p class="text-left text1-des"></p>
+            <h1 class="text-left text-des text-danger"><%= review.overall %></h1>
+            <img src="../img/imgv/<%= review.imgreview%>" class="img-fluid text-align-center" width="30%" alt="Responsive image">
+            <br>
           </div>
-          <br>
-          <b>
-            <h1 class="text-left text-des text-danger"></h1>
-          </b>
-          <br>
-        <% }) %>
+        <% } %>
       
       </div>
         
