@@ -134,6 +134,8 @@ var review = new Schema({
   experience : String,
   topIm : String,
   impression : String,
+  overall : String,
+  imgreview :String,
 })
 
 // สร้างและส่งออกโมเดล
