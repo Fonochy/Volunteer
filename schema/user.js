@@ -129,6 +129,13 @@ var program = new Schema({
   infodate : String,
 });
 
+var review = new Schema({
+  topicEx : String,
+  experience : String,
+  topIm : String,
+  impression : String,
+})
+
 // สร้างและส่งออกโมเดล
 exports.Users = mongoose.model("users", myuser);
 exports.Contact = mongoose.model("contactus", mycontact);
@@ -136,6 +143,7 @@ exports.Apply = mongoose.model("applyuser", userapply);
 exports.Feature = mongoose.model("featureprogram", feature);
 exports.Destination = mongoose.model("featuredestination", destination);
 exports.Program = mongoose.model("program", program);
+exports.Review = mongoose.model("review", review);
 
 //ออกแบบฟังก์ชั่นสำหรับบันทึกข้อมูล
 exports.saveProduct = function (model, data) {
