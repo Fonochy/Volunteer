@@ -57,6 +57,17 @@ router.get("/mainprogram/:id", function (req, res, next) {
   });
 });
 
+router.get("/review/:id", function (req, res, next) {
+  Review.find()
+    .limit(10)
+    .exec((err_reviews, reviews) => {
+      res.render("review", {
+        review: reviews,
+      });
+      console.log(err_reviews);
+    });
+});
+
 router.get("/signin", function (req, res, next) {
   res.render("signin");
 });
@@ -95,6 +106,9 @@ router.get("/howtowork", function (req, res, next) {
 
 router.get("/allprogram", function (req, res, next) {
   res.render("program");
+});
+router.get("/review", function (req, res, next) {
+  res.render("review");
 });
 
 module.exports = router;
