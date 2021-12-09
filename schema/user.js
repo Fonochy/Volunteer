@@ -69,6 +69,7 @@ var userapply = new Schema({
   apply_paymentdate: Date,
   apply_timepayment: String,
   apply_amountpay: String,
+  apply_transferpay: String,
 });
 
 var feature = new Schema({

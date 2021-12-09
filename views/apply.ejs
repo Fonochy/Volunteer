@@ -67,7 +67,7 @@
     <h1><img src="img/imgv/code.png" class="img-pro" alt="Responsive image">&nbsp; Program selection</h1>
   </div>
     <div class="container">
-  <form class="needs-validation" novalidate method="POST" action="/api/user/add-apply" nctype="multipart/form-data">
+  <form class="needs-validation" novalidate method="POST" action="/api/user/add-apply" nctype="multipart/form-data" >
     <div class="container">
       <div class="col-md-6 mb-6">
         <label for="inputCountry" class="mt-5 h3 text-black">DESTINATIONS:</label>
@@ -365,6 +365,15 @@
       <div class="col-md-6 mb-6">
         <label for="amountPay" class="mt-3 h3 text-black">Amount:</label>
         <input type="text" class="form-controlamount" id="input_amountpay" placeholder="" name="apply_amountpay"
+          required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-6">
+        <label for="transferPay" class="mt-3 h3 text-black">Transfer Proof:</label>
+        <input type="file" class="form-controlamount" id="input_transferpay" placeholder="" name="apply_transferpay"
           required>
         <div class="valid-feedback">
           Looks good!
