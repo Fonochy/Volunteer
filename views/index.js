@@ -13,7 +13,7 @@ router.get("/", async (req, res, next) => {
         .limit(4)
         .exec((err_destination, destination) => {
           Review.find()
-            .limit(3)
+            .limit(4)
             .exec((err_review, review) => {
               res.render("index", {
               featureprogram: program,
@@ -72,12 +72,11 @@ router.get("/mainprogram/:id", function (req, res, next) {
 
 router.get("/review/:id", function (req, res, next) {
   var validation = req.session.user;
-
   const review_id = req.params.id;
   console.log(review_id);
   Review.findOne({ _id: review_id }).exec((err, doc) => {
     console.log(doc);
-    res.render("review", { review: doc });
+    res.render("review", { user : validation, review: doc });
   });
 });
   
