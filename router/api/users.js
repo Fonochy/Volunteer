@@ -10,7 +10,7 @@ const multer = require('multer')
 
 const storage = multer.diskStorage({
     destination:function(req,file,cb){
-        cb(null,'../../public/transferproof') // ตำแหน่งจัดเก็บไฟล์
+      cb(null, `${__dirname}/../../public/transferproof`); // ตำแหน่งจัดเก็บไฟล์
     },
     filename:function(req,file,cb){
         cb(null,Date.now()+".jpg")//เปลี่ยนชื่อไฟล์ ป้องกันชื่อซ้ำกัน
@@ -46,8 +46,10 @@ router.post("/add-users-api", function (req, res, next) {
 
 // add Apply
 router.post("/add-apply",upload.single("apply_transferpay") ,(req, res) => {
-  const apply = req.body;
-  
+  const apply = {
+    ...req.body,
+    apply_transferpay: req.file.filename,
+  };
   var data = Apply(apply);
   data.save(function (err) {
     if (err) {

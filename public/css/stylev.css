@@ -253,8 +253,8 @@ aside {
 .num-container {
   border-radius: 360;
   background-color: #e19898;
-  width: 250;
-  height: 250;
+  width: 100%;
+  height: 50%;
 }
 
 
@@ -280,7 +280,7 @@ aside {
   font-size: 20px;
 } 
 .pich3 {
- width: 200px;
+ width: 300px;
 }
 
 .hd4{
@@ -468,4 +468,19 @@ a:hover {
 
 .apply_amountpay{
   width: 600px;
+}
+
+.imgsize2{
+  width: 100%;
+}
+
+.imgsize3{
+  width: 20%;
+}
+
+.footer{
+  position:relative;
+  width: 100%;
+  left: 0px;
+  bottom: 0px;
 }

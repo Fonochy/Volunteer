@@ -21,7 +21,42 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
     integrity="sha512-BNZ1x39RMH+UYylOW419beaGO0wqdSkO7pi1rYDYco9OL3uvXaC/GTqA5O4CVK2j4K9ZkoDNSSHVkEQKkgwdiw=="
     crossorigin="anonymous"></script>
-
+    <nav class="navbar navbar-expand-lg navbar fixed-top navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="/"><img src="img/imgv/logo_transparent.png" width="100" height="100" alt="Responsive navbar"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse nav justify-content-end navi" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item ">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About</a>
+              <ul class="dropdown-menu">
+                <li><a href="/aboutus" class="dropdown-item">About Us</a></li>
+                <li><a href="/contactus" class="dropdown-item">Contact Us</a></li>
+                <li><a href="/howtowork" class="dropdown-item">How to work</a></li>
+                <li><a href="/allprogram" class="dropdown-item">All Programs</a></li>
+              </ul>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link" href="/apply">Apply</a>
+            </li>
+            <li class="nav-item">
+              <% if(user) {%>
+              <a class="nav-link" href="/signout"><%= `${user.user_firstname} ${user.user_lastname}` %></a>
+              <% } else {%>
+              <a class="nav-link" href="/signin">Sign In</a>
+              <% } %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
 </head>
 
