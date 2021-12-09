@@ -137,6 +137,10 @@ var review = new Schema({
   impression : String,
   overall : String,
   imgreview :String,
+  shortreview : String,
+  namereview : String,
+  countryreview : String,
+  imgperson : String,
 })
 
 
