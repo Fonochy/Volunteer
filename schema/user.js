@@ -142,6 +142,8 @@ var review = new Schema({
   namereview : String,
   countryreview : String,
   imgperson : String,
+  reviewage : String,
+  reviewnation : String,
 })
 
 

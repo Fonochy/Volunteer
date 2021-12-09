@@ -66,7 +66,7 @@
   <div class=" w-50 p-2 text-center text-danger text-des" style="background-color: #F6F0F0;">
     <h1><img src="img/imgv/code.png" class="img-pro" alt="Responsive image">&nbsp; Program selection</h1>
   </div>
-    <div class="container">
+    
   <form class="needs-validation" novalidate method="POST" action="/api/user/add-apply" nctype="multipart/form-data" >
     <div class="container">
       <div class="col-md-6 mb-6">
@@ -322,39 +322,42 @@
     </div>
     <div class="container">
       <div class="col-md-6 mb-6">
-        <label for="inputProgram" class="mt-3 h3 text-black">Program:</label>
+        <label for="inputProgram" class="mt-3 h3 text-black">Program:</label> 
         <select class="apply_program" id="app_program" name="apply_program">
-          <option value="Default">CHOOSE PROGRAM</option>
-          <option value="Marine Conservation">Marine Conservation</option>
-          <option value="Education Support">Education Support</option>
-          <option value="Social Welfaren">Social Welfare</option>
-        </select>
+          <option value="Default">CHOOSE PROGRAM</option> 
+          <% Object.values(program).forEach(function(item){%>
+          <option value=<%= item.name %>><%= item.name %> (<%= item.price %>)</option>
+          <% }) %>
+        </select> 
       </div>
+    </div>
+    <div class="container">
       <div class="col-md-6 mb-6">
         <label for="inputDateapp" class="mt-3 h3 text-black">Start Date</label>
         <input type="date" class="form-control" id="inputDate_apply" placeholder="DD/MM/YYYY" name="apply_datebirth"
           required>
       </div>
+
       <div class="col-md-6 mb-6">
         <label for="inputDuration" class="mt-3 h3 text-black">Duration:</label>
         <select class="apply_duration" id="app_duration" name="apply_duration">
           <option value="default">-Select-</option>
-          <option value="2week">2week</option>
-          <option value="1month">1month</option>
-          <option value="2month">2month</option>
+          <option value="1 week">1 week</option>
+          <option value="2 weeks">2 weeks</option>
         </select>
       </div>
+
       <div class="col-md-6 mb-6">
         <label class="mt-3 h3 text-black">Payment Details:</label><br>
         <p class="fs-3"><img src="img/imgv/paypal.png" width="25%" class="img-fluid mt-3" alt="Responsive image">&nbsp;
           &nbsp; PowerVolunteer@gmail.com</p>
       </div>
+
       <div class="col-md-6 mb-6">
         <label for="inputPaydate" class="mt-3 h3 text-black">Payment date :</label>
         <input type="date" class="formpaydate" id="input_paymentdate" placeholder="DD/MM/YYYY" name="apply_paymentdate"
           required>
       </div>
-
 
       <div class="col-md-6 mb-6">
         <label for="inputDateapp" class="mt-3 h3 text-black">Time</label>
@@ -364,70 +367,49 @@
 
       <div class="col-md-6 mb-6">
         <label for="amountPay" class="mt-3 h3 text-black">Amount:</label>
-        <input type="text" class="form-controlamount" id="input_amountpay" placeholder="" name="apply_amountpay"
-          required>
-        <div class="valid-feedback">
-          Looks good!
-        </div>
+        <select class="apply_amountpay"  name="apply_amountpay">
+          <option value="Default">CHOOSE PRICE</option>
+          <% Object.values(program).forEach(function(item){%>
+            <option value=<%= item.price %>><%= item.price %></option>
+          <% }) %>
+        </select> 
       </div>
 
       <div class="col-md-6 mb-6">
         <label for="transferPay" class="mt-3 h3 text-black">Transfer Proof:</label>
-        <input type="file" class="form-controlamount" id="input_transferpay" placeholder="" name="apply_transferpay"
+        <form method="POST" action="/api/user/add-apply" enctype="multipart/form-data">
+          <input type="file" class="form-controlamount" id="input_transferpay" name="apply_transferpay"
           required>
+        </form>
         <div class="valid-feedback">
           Looks good!
         </div>
       </div>
-
 
       <br><br>
       <div class="col-md-12 mb-12">
         <input class="btn btn-primary" type="submit"></input>
       </div>
-
+      <br><br>
     </div>
   </form>
-
 </body>
 
 <!-- Footer -->
-<footer class="text-center text-lg-start text-muted;">
+
+<footer class="text-center text-lg-start text-muted cardbody" style="background-color: #FAEEEE;">
   <!-- Section: Social media -->
   <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
     <!-- Left -->
-    <div class="me-5 d-none d-lg-block cardbody">
+    <div class="me-5 d-none d-lg-block">
       <span>Get connected with us on social networks:</span>
     </div>
     <!-- Left -->
-
-    <!-- Right -->
-    <div>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-google"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-    <!-- Right -->
   </section>
   <!-- Section: Social media -->
 
   <!-- Section: Links  -->
-  <section class="cardbody">
+  <section class="">
     <div class="container text-center text-md-start mt-5">
       <!-- Grid row -->
       <div class="row mt-3">
@@ -451,16 +433,16 @@
             Blogs
           </h6>
           <p>
-            <a href="#!" class="text-reset">United State</a>
+            <a href="https://www.mapquest.com/travel/interesting-facts-about-the-united-states/" class="text-reset">United State</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">France</a>
+            <a href="https://heyexplorer.com/what-is-france-known-and-famous-for/" class="text-reset">France</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Thailand</a>
+            <a href="https://www.asiahighlights.com/thailand/why-thailand-is-so-popular" class="text-reset">Thailand</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Vietnam</a>
+            <a href="https://heyexplorer.com/what-is-vietnam-famous-for/" class="text-reset">Vietnam</a>
           </p>
         </div>
         <!-- Grid column -->
@@ -489,7 +471,6 @@
             nattinee.nu@gmail.com
           </p>
           <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
         </div>
         <!-- Grid column -->
       </div>
@@ -501,10 +482,9 @@
   <!-- Copyright -->
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
     © 2021 Copyright:
-    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    <h5 class="text-reset fw-bold">Power Volunteer.com</h5>
   </div>
   <!-- Copyright -->
 </footer>
 <!-- Footer -->
-
 </html>

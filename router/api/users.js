@@ -10,16 +10,16 @@ const multer = require('multer')
 
 const storage = multer.diskStorage({
     destination:function(req,file,cb){
-        cb(null,'../../public/transferproof/') // ตำแหน่งจัดเก็บไฟล์
+        cb(null,'../../public/transferproof') // ตำแหน่งจัดเก็บไฟล์
     },
     filename:function(req,file,cb){
         cb(null,Date.now()+".jpg")//เปลี่ยนชื่อไฟล์ ป้องกันชื่อซ้ำกัน
     }
-})
+});
 //เริ่มต้น upload
 const upload = multer({
   storage:storage
-})
+});
 
 /* POST Data. */
 // add User
