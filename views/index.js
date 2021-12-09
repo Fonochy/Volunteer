@@ -84,12 +84,16 @@ router.get("/review/:id", function (req, res, next) {
 
 router.get("/signin", function (req, res, next) {
   var validation = req.session.user;
-  res.render("signin");
+  res.render("signin", {
+    user : validation,
+  });
 });
 
 router.get("/signup", function (req, res, next) {
   var validation = req.session.user;
-  res.render("signup");
+  res.render("signup", {
+    user : validation,
+  });
 });
 
 router.get("/aboutus", function (req, res, next) {
