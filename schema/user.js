@@ -69,6 +69,7 @@ var userapply = new Schema({
   apply_paymentdate: Date,
   apply_timepayment: String,
   apply_amountpay: String,
+  apply_transferpay: String,
 });
 
 var feature = new Schema({
@@ -131,11 +132,20 @@ var program = new Schema({
 });
 
 var review = new Schema({
-  topicEx: String,
-  experience: String,
-  topIm: String,
-  impression: String,
-});
+  topicEx : String,
+  experience : String,
+  topIm : String,
+  impression : String,
+  overall : String,
+  imgreview :String,
+  shortreview : String,
+  namereview : String,
+  countryreview : String,
+  imgperson : String,
+  reviewage : String,
+  reviewnation : String,
+})
+
 
 // สร้างและส่งออกโมเดล
 exports.Users = mongoose.model("users", myuser);

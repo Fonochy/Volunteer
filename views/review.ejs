@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Review</title>
-        <link rel="stylesheet" type="text/css" href="css/stylev.css" />
+        <link rel="stylesheet" type="text/css" href="../css/stylev.css" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
@@ -13,7 +13,7 @@
         </script>
         <nav class="navbar navbar-expand-lg navbar fixed-top navbar-light bg-light">
           <div class="container">
-              <a class="navbar-brand" href="#"><img src="../img/imgv/logo_transparent.png" width="100" height="100"
+              <a class="navbar-brand" href="/"><img src="../img/imgv/logo_transparent.png" width="100" height="100"
                       alt=""></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                   aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,10 +35,14 @@
                       </li>
       
                       <li class="nav-item">
-                          <a class="nav-link" href="/apply">Apply</a>
+                        <a class="nav-link" href="/apply">Apply</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" href="/signin">Sign In</a>
+                        <% if(user) {%>
+                        <a class="nav-link" href="/signout"><%= `${user.user_firstname} ${user.user_lastname}` %></a>
+                        <% } else {%>
+                        <a class="nav-link" href="/signin">Sign In</a>
+                        <% } %>
                       </li>
                   </ul>
               </div>
@@ -49,175 +53,145 @@
         <br><br><br><br><br><br>
         <!-- Middle image -->
         <img src="../img/imgv/v8.jpg" class="img-fluid text-align-center" width="100%" alt="Responsive image">
-       
-        <div class="container">
+        <% if(review){%>
+        <aside>
           <br><br><br>
-          <h1 class="text-left display-3 fw-bold text-muted topicC "></h1>
-          <h4 class="text-left mb-2 cardtitle"></h4>
-      
-          <aside>
-            <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
-            <section class="about-cards-section">
-              <div class="container">
-                <div class="row">
-                  <div class="col-sm-12 card-wrapper ">
-                    <h1 class="text-center text-danger text-des ">Reviews</h1>
-                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
-                      <img class="w-100 h-100" src="../img/imgv/v2.jpg" alt="Card image cap">
-                    </div>
-                    <div class="card-body ">
-                      <h4 class="text-uppercase card-title text-center cardtitle">Carina</h4>
-                      <p class="text-uppercase card-title text-center cardbody">Great&nbsp;Britain&nbsp;->&nbsp;Thailand&nbsp;</p>
-                      <p class="card-text text-center cardbody">YIt has truly amazed me how much you can contribute to helping a community if you
-                        only have the initiative to start it.
-                      </p>
-                      <a href="/review" class="mt-auto btn btn-danger text-des text-center col-sm-12  ">Read More</a>
-                      
-                    </div>
-                    
+          <section class="about-cards-section">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-12 card-wrapper">
+                  <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                   <img class="card-img-top w-100 h-100" src="../img/imgv/<%= review.imgperson%>" class="img-fluid text-align-center" width="100%" alt="Responsive image">
                   </div>
+                    <div class="card-body text-center mt-4">
+                      <h4 class="text-uppercase card-title cardtitle text-danger"><%= review.namereview %></h4>
+                      <p class="text-uppercase card-title cardbody"><%= review.countryreview %></p>
+                      <p class="card-text cardbody"><%= review.reviewage %></p>
+                      <p class="card-text cardbody"><%= review.reviewnation %></p>
+                    </div>
                 </div>
               </div>
-            </section>
-          </aside>
+            </div>
+          </section>
+        </aside>
+       
+      <div class="container">
+        
+          <br><br><br>
+          <h1 class="text-left display-3 fw-bold text-danger topicC"><%= review.topicEx %></h1>
+          <h4 class="text-left mb-2 cardtitle"></h4>
           <br>
           <div class="col-sm-6 square" style="background-color: #F6F0F0;">
-            <br>
-            <h1 class="text-left text-des text-danger"></h1>
-            <p class="text-left text1-des"></p>
             <br><br>
+            <h1 class="text-left text-danger text-des"><%= review.topicEx %></h1>
+            <br>
+            <p class="text-left cardbody">&emsp;&emsp;<%= review.experience %></p>
+            <br>
             <hr>
-            <h1 class="text-left text-des text-danger"></h1>
-            <p class="text-left text1-des"></p>
+            <h1 class="text-left text-danger text-des"><%= review.topIm %></h1>
+            <br>
+            <p class="text-left cardbody">&emsp;&emsp;<%= review.impression %></p>
+            <br>
+            <hr>
+            <h1 class="text-left text-des text-danger"><%= review.overall %></h1>
+            <img src="../img/imgv/<%= review.imgreview%>" class="img-fluid text-align-center" width="30%" alt="Responsive image">
+            <br>
           </div>
-          <br>
-          <b>
-            <h1 class="text-left text-des text-danger"></h1>
-          </b>
-          <br>
-          <img src="" class="img-fluid text-align-center" width="100%" alt="Responsive image">
-          <br><br>
-          <p class="text-left text1-des"></p>
+        <% } %>
+      
+      </div>
+</body>
+
+<!-- Footer -->
+
+<footer class="text-center text-lg-start text-muted cardbody" style="background-color: #FAEEEE;">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Left -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem "></i>About Us
+          </h6>
+          <p>
+            Our website collects places around the world that need help and volunteers can find for places that they
+            want to go , providing opportunities to help those in need and enhance the quality of life in that places.
+          </p>
         </div>
-      
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Blogs
+          </h6>
+          <p>
+            <a href="https://www.mapquest.com/travel/interesting-facts-about-the-united-states/" class="text-reset">United State</a>
+          </p>
+          <p>
+            <a href="https://heyexplorer.com/what-is-france-known-and-famous-for/" class="text-reset">France</a>
+          </p>
+          <p>
+            <a href="https://www.asiahighlights.com/thailand/why-thailand-is-so-popular" class="text-reset">Thailand</a>
+          </p>
+          <p>
+            <a href="https://heyexplorer.com/what-is-vietnam-famous-for/" class="text-reset">Vietnam</a>
+          </p>
         </div>
-        
-      </body>
-      
-      <!-- Footer -->
-      <footer class="text-center text-lg-start text-muted;">
-        <!-- Section: Social media -->
-        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-          <!-- Left -->
-          <div class="me-5 d-none d-lg-block">
-            <span>Get connected with us on social networks:</span>
-          </div>
-          <!-- Left -->
-      
-          <!-- Right -->
-          <div>
-            <a href="" class="me-4 text-reset">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="" class="me-4 text-reset">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="" class="me-4 text-reset">
-              <i class="fab fa-google"></i>
-            </a>
-            <a href="" class="me-4 text-reset">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="" class="me-4 text-reset">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="" class="me-4 text-reset">
-              <i class="fab fa-github"></i>
-            </a>
-          </div>
-          <!-- Right -->
-        </section>
-        <!-- Section: Social media -->
-      
-        <!-- Section: Links  -->
-        <section class="">
-          <div class="container text-center text-md-start mt-5">
-            <!-- Grid row -->
-            <div class="row mt-3">
-              <!-- Grid column -->
-              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                <!-- Content -->
-                <h6 class="text-uppercase fw-bold mb-4">
-                  <i class="fas fa-gem "></i>About Us
-                </h6>
-                <p>
-                  Our website collects places around the world that need help and volunteers can find for places that they
-                  want to go , providing opportunities to help those in need and enhance the quality of life in that places.
-                </p>
-              </div>
-              <!-- Grid column -->
-      
-              <!-- Grid column -->
-              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                <!-- Links -->
-                <h6 class="text-uppercase fw-bold mb-4">
-                  Blogs
-                </h6>
-                <p>
-                  <a href="#!" class="text-reset">United State</a>
-                </p>
-                <p>
-                  <a href="#!" class="text-reset">France</a>
-                </p>
-                <p>
-                  <a href="#!" class="text-reset">Thailand</a>
-                </p>
-                <p>
-                  <a href="#!" class="text-reset">Vietnam</a>
-                </p>
-              </div>
-              <!-- Grid column -->
-      
-              <!-- Grid column -->
-              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                <!-- Content -->
-                <h6 class="text-uppercase fw-bold mb-4">
-                  <i class="fas fa-gem "></i>Customer Relationship
-                </h6>
-                <p>
-                  20 RAKAU GROVEES, STOKES VALLEY, WELLINGTON, NEW ZEALAND
-                </p>
-              </div>
-              <!-- Grid column -->
-      
-              <!-- Grid column -->
-              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                <!-- Links -->
-                <h6 class="text-uppercase fw-bold mb-4">
-                  Contact Us
-                </h6>
-                <p><i class="fas fa-home me-3"></i> WELLINGTON, NEW ZEALAND</p>
-                <p>
-                  <i class="fas fa-envelope me-3"></i>
-                  nattinee.nu@gmail.com
-                </p>
-                <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-                <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
-              </div>
-              <!-- Grid column -->
-            </div>
-            <!-- Grid row -->
-          </div>
-        </section>
-        <!-- Section: Links  -->
-      
-        <!-- Copyright -->
-        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-          © 2021 Copyright:
-          <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem "></i>Customer Relationship
+          </h6>
+          <p>
+            20 RAKAU GROVEES, STOKES VALLEY, WELLINGTON, NEW ZEALAND
+          </p>
         </div>
-        <!-- Copyright -->
-      </footer>
-      <!-- Footer -->
-      
-      </html>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Contact Us
+          </h6>
+          <p><i class="fas fa-home me-3"></i> WELLINGTON, NEW ZEALAND</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            nattinee.nu@gmail.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2021 Copyright:
+    <h5 class="text-reset fw-bold">Power Volunteer.com</h5>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+</html>

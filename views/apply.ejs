@@ -12,86 +12,65 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
   </script>
-   <nav class="navbar navbar-expand-lg navbar fixed-top navbar-light bg-light">
-    <div class="container">
-        <a class="navbar-brand" href="#"><img src="img/imgv/logo_transparent.png" width="100" height="100"
-                alt=""></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse nav justify-content-end navi" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item ">
-                    <a class="nav-link" href="/">Home</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/aboutus" class="dropdown-item">About Us</a></li>
-                        <li><a href="/contactus" class="dropdown-item">Contact Us</a></li>
-                        <li><a href="/howtowork" class="dropdown-item">How to work</a></li>
-                        <li><a href="/allprogram" class="dropdown-item">All Programs</a></li>
-                    </ul>
-                </li>
-
-                <li class="nav-item">
+    <nav class="navbar navbar-expand-lg navbar fixed-top navbar-light bg-light">
+      <div class="container">
+          <a class="navbar-brand" href="/"><img src="img/imgv/logo_transparent.png" width="100" height="100"
+                  alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse nav justify-content-end navi" id="navbarNav">
+              <ul class="navbar-nav">
+                  <li class="nav-item ">
+                      <a class="nav-link" href="/">Home</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About</a>
+                      <ul class="dropdown-menu">
+                          <li><a href="/aboutus" class="dropdown-item">About Us</a></li>
+                          <li><a href="/contactus" class="dropdown-item">Contact Us</a></li>
+                          <li><a href="/howtowork" class="dropdown-item">How to work</a></li>
+                          <li><a href="/allprogram" class="dropdown-item">All Programs</a></li>
+                      </ul>
+                  </li>
+  
+                  <li class="nav-item">
                     <a class="nav-link" href="/apply">Apply</a>
-                </li>
-                <li class="nav-item">
+                  </li>
+                  <li class="nav-item">
+                    <% if(user) {%>
+                    <a class="nav-link" href="/signout"><%= `${user.user_firstname} ${user.user_lastname}` %></a>
+                    <% } else {%>
                     <a class="nav-link" href="/signin">Sign In</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+                    <% } %>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+
 </head>
 
 <body>
-
   <br><br><br><br><br><br>
-  <br>
   <div class="container">
-    <!-- Middle image -->
-    <h1 class="text-center display-2 fw-bold text-muted">APPLICATION FORM</h1>
-    <br>
-    <div class="img-apply">
-      <img src="img/imgv/apply.png" width="85%" class="img-fluid text-align-center" alt="Responsive image">
+   <h1 class="text-center display-2 fw-bold text-danger text-des">APPLICATION FORM</h1>
+     <br>
+  </div>
+  <img src="img/imgv/apply.png" class="img-fluid text-align-center" width="100%" alt="Responsive image">
+  <br><br><br>
+  <div class="container">
+    <div class="row">
+        <div class="w-50 text-danger" style="background-color: #F6F0F0;">
+        <h1 class="text-des"><img src="img/imgv/code.png" class="img-pro" alt="Responsive image">&nbsp; Program selection</h1>
+        </div>
     </div>
   </div>
-  <hr>
-  <div class="container"></div>
-  <div class=" w-50 p-2 text-center text-danger" style="background-color: #F6F0F0;">
-    <h1><img src="img/imgv/code.png" class="img-pro" alt="Responsive image">&nbsp; Program selection</h1>
-
-  </div>
-  <aside>
+  
+  <form class="needs-validation" novalidate method="POST" action="/api/user/add-apply" nctype="multipart/form-data" >
     <div class="container">
-
-      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
-      <section class="about-cards-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 card-wrapper ">
-              <h1 class="text-center text-danger text-des ">Reviews</h1>
-              <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
-                <img class="w-100 h-100" src="../img/imgv/v2.jpg" alt="Card image cap">
-              </div>
-              <div class="card-body ">
-                <h4 class="text-uppercase card-title text-center cardtitle text-danger">Carina</h4>
-                <p class="text-uppercase card-title text-center cardbody">Great&nbsp;Britain&nbsp;->&nbsp;Thailand&nbsp;</p>
-                <p class="card-text text-center cardbody">YIt has truly amazed me how much you can contribute to helping a community if you
-                  only have the initiative to start it.
-                </p>
-              </div>
-            </div>
-          </div>
-      </section>
-    </div>
-  </aside>
-  <form class="needs-validation" novalidate method="POST" action="/api/user/add-apply" nctype="multipart/form-data">
-    <div class="container">
-      <div class="col-md-6 mb-6">
+      <div class="col-md-6">
         <label for="inputCountry" class="mt-5 h3 text-black">DESTINATIONS:</label>
         <select class="apply_destination" id="app_destination" name="apply_destination">
           <option value="Default">CHOOSE DESTINATION</option>
@@ -342,70 +321,85 @@
         </select>
       </div>
     </div>
+    
     <div class="container">
-      <div class="col-md-6 mb-6">
-        <label for="inputProgram" class="mt-3 h3 text-black">Program:</label>
+      <div class="col-md-6">
+        <label for="inputProgram" class="mt-3 h3 text-black">Program:</label> 
         <select class="apply_program" id="app_program" name="apply_program">
-          <option value="Default">CHOOSE PROGRAM</option>
-          <option value="Marine Conservation">Marine Conservation</option>
-          <option value="Education Support">Education Support</option>
-          <option value="Social Welfaren">Social Welfare</option>
-        </select>
+          <option value="Default">CHOOSE PROGRAM</option> 
+          <% Object.values(program).forEach(function(item){%>
+          <option value=<%= item.name %>><%= item.name %> (<%= item.price %>)</option>
+          <% }) %>
+        </select> 
       </div>
-      <div class="col-md-6 mb-6">
+    </div>
+    <div class="container">
+      <div class="col-md-6">
         <label for="inputDateapp" class="mt-3 h3 text-black">Start Date</label>
         <input type="date" class="form-control" id="inputDate_apply" placeholder="DD/MM/YYYY" name="apply_datebirth"
           required>
       </div>
-      <div class="col-md-6 mb-6">
+
+      <div class="col-md-6">
         <label for="inputDuration" class="mt-3 h3 text-black">Duration:</label>
         <select class="apply_duration" id="app_duration" name="apply_duration">
           <option value="default">-Select-</option>
-          <option value="2week">2week</option>
-          <option value="1month">1month</option>
-          <option value="2month">2month</option>
+          <option value="1 week">1 week</option>
+          <option value="2 weeks">2 weeks</option>
         </select>
       </div>
-      <div class="col-md-6 mb-6">
+
+      <div class="col-md-6">
         <label class="mt-3 h3 text-black">Payment Details:</label><br>
         <p class="fs-3"><img src="img/imgv/paypal.png" width="25%" class="img-fluid mt-3" alt="Responsive image">&nbsp;
           &nbsp; PowerVolunteer@gmail.com</p>
       </div>
-      <div class="col-md-6 mb-6">
+
+      <div class="col-md-6">
         <label for="inputPaydate" class="mt-3 h3 text-black">Payment date :</label>
         <input type="date" class="formpaydate" id="input_paymentdate" placeholder="DD/MM/YYYY" name="apply_paymentdate"
           required>
       </div>
 
-
-      <div class="col-md-6 mb-6">
+      <div class="col-md-6">
         <label for="inputDateapp" class="mt-3 h3 text-black">Time</label>
         <input type="time" class="form-control" id="inputTime_apply" placeholder="__:__" name="apply_timepayment"
           required>
       </div>
 
-      <div class="col-md-6 mb-6">
+      <div class="col-md-6">
         <label for="amountPay" class="mt-3 h3 text-black">Amount:</label>
-        <input type="text" class="form-controlamount" id="input_amountpay" placeholder="" name="apply_amountpay"
+        <select class="apply_amountpay"  name="apply_amountpay">
+          <option value="Default">CHOOSE PRICE</option>
+          <% Object.values(program).forEach(function(item){%>
+            <option value=<%= item.price %>><%= item.price %></option>
+          <% }) %>
+        </select> 
+      </div>
+
+      <div class="col-md-6">
+        <label for="transferPay" class="mt-3 h3 text-black">Transfer Proof:</label>
+        <form method="POST" action="/api/user/add-apply" enctype="multipart/form-data">
+          <input type="file" class="form-controlamount" id="input_transferpay" name="apply_transferpay"
           required>
+        </form>
         <div class="valid-feedback">
           Looks good!
         </div>
       </div>
 
-
       <br><br>
-      <div class="col-md-12 mb-12">
+      <div class="col-md-6">
         <input class="btn btn-primary" type="submit"></input>
       </div>
-
+      <br><br>
     </div>
   </form>
-
 </body>
 
 <!-- Footer -->
-<footer class="text-center text-lg-start text-muted;">
+
+<footer class="text-center text-lg-start text-muted cardbody" style="background-color: #FAEEEE;">
   <!-- Section: Social media -->
   <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
     <!-- Left -->
@@ -413,29 +407,6 @@
       <span>Get connected with us on social networks:</span>
     </div>
     <!-- Left -->
-
-    <!-- Right -->
-    <div>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-google"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-    <!-- Right -->
   </section>
   <!-- Section: Social media -->
 
@@ -464,16 +435,16 @@
             Blogs
           </h6>
           <p>
-            <a href="#!" class="text-reset">United State</a>
+            <a href="https://www.mapquest.com/travel/interesting-facts-about-the-united-states/" class="text-reset">United State</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">France</a>
+            <a href="https://heyexplorer.com/what-is-france-known-and-famous-for/" class="text-reset">France</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Thailand</a>
+            <a href="https://www.asiahighlights.com/thailand/why-thailand-is-so-popular" class="text-reset">Thailand</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Vietnam</a>
+            <a href="https://heyexplorer.com/what-is-vietnam-famous-for/" class="text-reset">Vietnam</a>
           </p>
         </div>
         <!-- Grid column -->
@@ -502,7 +473,6 @@
             nattinee.nu@gmail.com
           </p>
           <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
         </div>
         <!-- Grid column -->
       </div>
@@ -514,10 +484,9 @@
   <!-- Copyright -->
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
     © 2021 Copyright:
-    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    <h5 class="text-reset fw-bold">Power Volunteer.com</h5>
   </div>
   <!-- Copyright -->
 </footer>
 <!-- Footer -->
-
 </html>

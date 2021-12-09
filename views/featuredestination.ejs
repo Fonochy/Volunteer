@@ -14,7 +14,7 @@
   </script>
   <nav class="navbar navbar-expand-lg navbar fixed-top navbar-light bg-light">
     <div class="container">
-        <a class="navbar-brand" href="#"><img src="../img/imgv/logo_transparent.png" width="100" height="100"
+        <a class="navbar-brand" href="/"><img src="../img/imgv/logo_transparent.png" width="100" height="100"
                 alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,10 +36,14 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="/apply">Apply</a>
+                  <a class="nav-link" href="/apply">Apply</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/signin">Sign In</a>
+                  <% if(user) {%>
+                  <a class="nav-link" href="/signout"><%= `${user.user_firstname} ${user.user_lastname}` %></a>
+                  <% } else {%>
+                  <a class="nav-link" href="/signin">Sign In</a>
+                  <% } %>
                 </li>
             </ul>
         </div>
@@ -56,32 +60,6 @@
     <br><br><br>
     <h1 class="text-left display-3 fw-bold text-muted topicC "><%= featuredestination.country%></h1>
     <h4 class="text-left mb-2 cardtitle"><%= featuredestination.info%></h4>
-
-    <aside>
-      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
-      <section class="about-cards-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 card-wrapper ">
-              <h1 class="text-center text-danger text-des ">Reviews</h1>
-              <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
-                <img class="w-100 h-100" src="../img/imgv/v2.jpg" alt="Card image cap">
-              </div>
-              <div class="card-body ">
-                <h4 class="text-uppercase card-title text-center cardtitle">Carina</h4>
-                <p class="text-uppercase card-title text-center cardbody">Great&nbsp;Britain&nbsp;->&nbsp;Thailand&nbsp;</p>
-                <p class="card-text text-center cardbody">YIt has truly amazed me how much you can contribute to helping a community if you
-                  only have the initiative to start it.
-                </p>
-                <a href="/review" class="mt-auto btn btn-danger text-des text-center col-sm-12  ">Read More</a>
-                
-              </div>
-              
-            </div>
-          </div>
-        </div>
-      </section>
-    </aside>
     <br>
     <div class="col-sm-6 square" style="background-color: #F6F0F0;">
       <br>
@@ -107,7 +85,8 @@
 </body>
 
 <!-- Footer -->
-<footer class="text-center text-lg-start text-muted;">
+
+<footer class="text-center text-lg-start text-muted cardbody" style="background-color: #FAEEEE;">
   <!-- Section: Social media -->
   <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
     <!-- Left -->
@@ -115,29 +94,6 @@
       <span>Get connected with us on social networks:</span>
     </div>
     <!-- Left -->
-
-    <!-- Right -->
-    <div>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-google"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-    <!-- Right -->
   </section>
   <!-- Section: Social media -->
 
@@ -166,16 +122,16 @@
             Blogs
           </h6>
           <p>
-            <a href="#!" class="text-reset">United State</a>
+            <a href="https://www.mapquest.com/travel/interesting-facts-about-the-united-states/" class="text-reset">United State</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">France</a>
+            <a href="https://heyexplorer.com/what-is-france-known-and-famous-for/" class="text-reset">France</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Thailand</a>
+            <a href="https://www.asiahighlights.com/thailand/why-thailand-is-so-popular" class="text-reset">Thailand</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Vietnam</a>
+            <a href="https://heyexplorer.com/what-is-vietnam-famous-for/" class="text-reset">Vietnam</a>
           </p>
         </div>
         <!-- Grid column -->
@@ -204,7 +160,6 @@
             nattinee.nu@gmail.com
           </p>
           <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
         </div>
         <!-- Grid column -->
       </div>
@@ -216,7 +171,7 @@
   <!-- Copyright -->
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
     © 2021 Copyright:
-    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    <h5 class="text-reset fw-bold">Power Volunteer.com</h5>
   </div>
   <!-- Copyright -->
 </footer>

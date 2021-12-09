@@ -5,6 +5,22 @@ var router = express.Router();
 var { Users, Contact, Apply } = require("../../schema/user");
 var Response = require("../../response");
 
+//อัพโหลดไฟล์
+const multer = require('multer')
+
+const storage = multer.diskStorage({
+    destination:function(req,file,cb){
+        cb(null,'../../public/transferproof') // ตำแหน่งจัดเก็บไฟล์
+    },
+    filename:function(req,file,cb){
+        cb(null,Date.now()+".jpg")//เปลี่ยนชื่อไฟล์ ป้องกันชื่อซ้ำกัน
+    }
+});
+//เริ่มต้น upload
+const upload = multer({
+  storage:storage
+});
+
 /* POST Data. */
 // add User
 router.post("/add-users-api", function (req, res, next) {
@@ -29,9 +45,9 @@ router.post("/add-users-api", function (req, res, next) {
 });
 
 // add Apply
-router.post("/add-apply", (req, res) => {
+router.post("/add-apply",upload.single("apply_transferpay") ,(req, res) => {
   const apply = req.body;
-
+  
   var data = Apply(apply);
   data.save(function (err) {
     if (err) {
