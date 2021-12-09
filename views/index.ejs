@@ -72,9 +72,8 @@
               We can learn everything that we never know.It’s a culture, lifestyle , food and good program thatyou
               should to go!!!
             </p>
-            <p class="card-text cardbody">Matthew Stanford (Volunteer in 2018)</p>
+            <li class="card-text cardbody">Matthew Stanford (Volunteer in 2018)</li>
             <br>
-            <a href="#" class="mt-auto btn btn-danger">Read More</a>
           </div>
         </div>
 
@@ -85,7 +84,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </div>
@@ -96,7 +94,7 @@
     <h2 class="text-des">FEATURED DESTINATION</h2>
     <div class="card-group">
       <% Object.values(featuredestination).forEach(function(item){%>
-      <div class="card" style="background-color: #FAEEEE;">
+      <div class="card">
         <img class="card-img-top" src="img/imgv/<%= item.image%>" alt="Card image cap">
         <div class="card-body">
           <b>
@@ -137,8 +135,8 @@
       <h2 class="text-des">REVIEWS</h2>
       <div class="card-group">
         <% Object.values(review).forEach(function(item){%>
-              <div class=" card card-style imgsize1" >
-                <img class="card-img-top" src="img/imgv/<%= item.imgperson%>" alt="Card image cap">
+              <div class=" card card-style" >
+                <img class="card-img-top" width="100%" src="img/imgv/<%= item.imgperson%>" alt="Card image cap">
                   <div class="card-body">
                     <b>
                       <h4 class="card-title cardtitle text-center"><%= item.namereview%></h4>
@@ -166,29 +164,6 @@
       <span>Get connected with us on social networks:</span>
     </div>
     <!-- Left -->
-
-    <!-- Right -->
-    <div>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-google"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-    <!-- Right -->
   </section>
   <!-- Section: Social media -->
 
@@ -217,16 +192,16 @@
             Blogs
           </h6>
           <p>
-            <a href="#!" class="text-reset">United State</a>
+            <a href="https://www.mapquest.com/travel/interesting-facts-about-the-united-states/" class="text-reset">United State</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">France</a>
+            <a href="https://heyexplorer.com/what-is-france-known-and-famous-for/" class="text-reset">France</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Thailand</a>
+            <a href="https://www.asiahighlights.com/thailand/why-thailand-is-so-popular" class="text-reset">Thailand</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Vietnam</a>
+            <a href="https://heyexplorer.com/what-is-vietnam-famous-for/" class="text-reset">Vietnam</a>
           </p>
         </div>
         <!-- Grid column -->
@@ -255,7 +230,6 @@
             nattinee.nu@gmail.com
           </p>
           <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
         </div>
         <!-- Grid column -->
       </div>
@@ -267,11 +241,10 @@
   <!-- Copyright -->
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
     © 2021 Copyright:
-    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    <h5 class="text-reset fw-bold">Power Volunteer.com</h5>
   </div>
   <!-- Copyright -->
 </footer>
 <!-- Footer -->
-
 
 </html>

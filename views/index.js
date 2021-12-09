@@ -108,9 +108,13 @@ router.get("/contactus", function (req, res, next) {
 
 router.get("/apply", function (req, res, next) {
   var validation = req.session.user;
+  Program.find().exec((err_programs, programs) => {
   res.render("apply",{
     user : validation,
+    program: programs,
   }); 
+    console.log(err_programs);
+  });
 });
 
 router.get("/howtowork", function (req, res, next) {
