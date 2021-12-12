@@ -103,7 +103,6 @@ router.post("/signin", (req, res) => {
   }
 });
 
-// Sign out
-router;
+
 
 module.exports = router;

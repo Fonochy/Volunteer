@@ -24,7 +24,7 @@ app.use(
   })
 );
 
-// view engine setup
+// view engine setup 
 https: app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 

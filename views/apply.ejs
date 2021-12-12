@@ -326,14 +326,14 @@
           <select class="apply_program imgsize2" id="app_program" name="apply_program">
             <option value="Default">CHOOSE PROGRAM</option> 
             <% Object.values(program).forEach(function(item){%>
-            <option value=<%= item.name %>><%= item.name %> (<%= item.price %>)</option>
+            <option value=<%= item.name %>><%= item.name %>(<%= item.price %>)</option>
             <% }) %>
           </select> 
         </div>
       
         <div class="col-md-6">
           <label for="inputDateapp" class="mt-3 h3 text-black">Start Date</label>
-          <input type="date" class="form-control imgsize2" id="inputDate_apply" placeholder="DD/MM/YYYY" name="apply_datebirth"
+          <input type="date" class="form-control imgsize2" id="inputDate_apply" placeholder="DD/MM/YYYY" name="apply_datestart"
           required>
         </div>
     

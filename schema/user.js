@@ -64,7 +64,7 @@ var mycontact = new Schema({
 var userapply = new Schema({
   apply_destination: String,
   apply_program: String,
-  apply_datebirth: Date,
+  apply_datestart: Date,
   apply_duration: String,
   apply_paymentdate: Date,
   apply_timepayment: String,
@@ -156,7 +156,4 @@ exports.Destination = mongoose.model("featuredestination", destination);
 exports.Program = mongoose.model("program", program);
 exports.Review = mongoose.model("review", review);
 
-//ออกแบบฟังก์ชั่นสำหรับบันทึกข้อมูล
-exports.saveProduct = function (model, data) {
-  model.save(data);
-};
+
